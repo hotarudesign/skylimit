@@ -23,7 +23,8 @@ body {
   padding: 4% 2%;
 }
 .logo {
-  display: inline;
+  display: inline-block;
+  width: 10%;
   text-align: center;
   font-weight: bold;
 }
@@ -79,30 +80,30 @@ body {
 }
 .home {
   .mv {
-    background: url(../images/mv_pc.jpg) no-repeat center/cover;
+    position: relative;
+    background: url(../images/fv_pc.jpg) no-repeat top/cover;
     height: 100vh;
     &__hero {
       position: absolute;
-      top: 60%;
+      top: 64%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 80%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       padding: 0 2%;
+      letter-spacing: 10px;
+      color: #fff;
       @include sp {
         flex-direction: column;
         top: 55%;
         width: 100%;
       }
     }
-    &__imgwrap {
-      width: 30%;
-      @include sp {
-        width: 60%;
-        margin-right: 8%;
-      }
+    &__catch-copy {
+      display: inline-block;
+    }
+    &__hr {
+      display: inline-block;
+      width: 50px;
+      margin-bottom: 3%;
     }
     &__catch-copy {
       font-size: 36px;
