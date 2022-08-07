@@ -1,0 +1,7 @@
+$borderColor: #e0dcdc;
+$sp: 500px;
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}

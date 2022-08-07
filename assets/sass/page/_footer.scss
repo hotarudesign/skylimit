@@ -1,0 +1,30 @@
+.footer {
+  padding: 3% 0 1%;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  @include sp {
+    padding: 4%;
+  }
+  &__logo {
+    font-size: 30px;
+    @include sp {
+      font-size: 22px;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%;
+    &-item {
+      margin: 2% 1% 0;
+      @include sp {
+        font-size: 14px;
+      }
+    }
+  }
+  small {
+    font-size: 10px;
+    font-weight: 100;
+  }
+}

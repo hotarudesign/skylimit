@@ -1,0 +1,29 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2%;
+  z-index: 5;
+  @include sp {
+    padding: 4% 2%;
+  }
+  &__logo {
+    font-size: 40px;
+    @include sp {
+      font-size: 32px;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0.5%;
+    &-item {
+      margin: 0 1%;
+      @include sp {
+        font-size: 14px;
+      }
+    }
+  }
+}

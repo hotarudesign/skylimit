@@ -1,0 +1,513 @@
+@charset 'UTF-8';
+
+@import "base/variables";
+@import "page/header";
+@import "page/footer";
+
+html {
+  font-size: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-family: "Kaisei Decol", serif;
+  color: #333;
+  letter-spacing: 1px;
+}
+.container {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 4% 2%;
+}
+.logo {
+  display: inline;
+  text-align: center;
+  font-weight: bold;
+}
+.btn {
+  position: relative;
+  padding: 1.5% 8%;
+  border: 1px solid $borderColor;
+  transition: all 0.5s;
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 63%;
+    right: 10%;
+    width: 30px;
+    height: 1px;
+    background: #333;
+    transition: all 0.5s;
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 55%;
+    right: 9%;
+    width: 10px;
+    height: 1px;
+    transform: rotate(45deg);
+    background: #333;
+    transition: all 0.5s;
+  }
+  &:hover {
+    background: #333;
+    color: #fff;
+    &::before {
+      background: #fff;
+      right: 7%;
+      transition: all 0.5s;
+    }
+    &::after {
+      background: #fff;
+      right: 6%;
+      transition: all 0.5s;
+    }
+  }
+}
+.sec-title {
+  font-size: 32px;
+  font-weight: bold;
+  @include sp {
+    text-align: center;
+  }
+}
+.home {
+  .mv {
+    background: url(../images/mv_pc.jpg) no-repeat center/cover;
+    height: 100vh;
+    &__hero {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2%;
+      @include sp {
+        flex-direction: column;
+        top: 55%;
+        width: 100%;
+      }
+    }
+    &__imgwrap {
+      width: 30%;
+      @include sp {
+        width: 60%;
+        margin-right: 8%;
+      }
+    }
+    &__catch-copy {
+      font-size: 36px;
+      padding-bottom: 10%;
+      font-weight: bold;
+    }
+  }
+  .column {
+    background: #fafafa;
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      @include sp {
+        flex-direction: column;
+        padding-bottom: 8%;
+      }
+    }
+    .news {
+      width: 70%;
+      @include sp {
+        width: 100%;
+      }
+      &__block {
+        width: 100%;
+        background: #fff;
+        border-radius: 5px;
+        margin-top: 2%;
+        padding: 2% 2% 4%;
+        border: 1px solid $borderColor;
+        table {
+          width: 100%;
+        }
+        tr {
+          border-bottom: 1px solid $borderColor;
+        }
+        td {
+          padding-top: 4%;
+          @include sp {
+            padding-top: 2%;
+          }
+        }
+      }
+      &__date {
+        width: 10%;
+        padding-left: 1%;
+        @include sp {
+          display: block;
+        }
+      }
+      &__comment {
+        width: 70%;
+        @include sp {
+          display: block;
+          width: 100%;
+          margin-bottom: 2%;
+        }
+      }
+      &__linkarea {
+        margin-top: 4%;
+        text-align: right;
+      }
+      &__link {
+        color: #0000ee;
+        opacity: 1;
+        transition: all 0.5s;
+        &:hover {
+          opacity: 0.7;
+          transition: all 0.5s;
+        }
+      }
+    }
+    .sidebar {
+      width: 32%;
+      margin-left: 2%;
+      @include sp {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 8%;
+      }
+      &__block {
+        width: 100%;
+        background: #fff;
+        border-radius: 5px;
+        margin-top: 4%;
+        padding: 2%;
+        border: 1px solid $borderColor;
+      }
+    }
+  }
+  .program {
+    overflow: hidden;
+    .sec-title {
+      text-align: center;
+    }
+    background: linear-gradient(#e7fcf8, #c4fa9d);
+    &__list {
+      margin-top: 2%;
+      &-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 8%;
+        margin-bottom: 8%;
+        @include sp {
+          flex-direction: column-reverse;
+          margin-bottom: 10%;
+        }
+        &:nth-child(odd) {
+          .program__img {
+            margin-left: 2%;
+            @include sp {
+              margin-left: 0;
+            }
+          }
+        }
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+          @include sp {
+            flex-direction: column-reverse;
+          }
+          .program__img {
+            margin-right: 2%;
+            @include sp {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      &-textarea {
+        width: 70%;
+        padding: 2% 2% 6%;
+        background: rgba(255, 255, 255, 0.5);
+        @include sp {
+          width: 100%;
+          margin-top: 8%;
+        }
+      }
+    }
+    &__title {
+      font-size: 26px;
+      @include sp {
+        font-size: 20px;
+      }
+    }
+    &__onair-date {
+      margin-top: 2%;
+      @include sp {
+        font-size: 12px;
+      }
+    }
+    &__detail {
+      margin-top: 2%;
+      line-height: 2em;
+      @include sp {
+        font-size: 14px;
+      }
+    }
+    &__img {
+      width: 40%;
+      box-shadow: 5px 5px 20px #999;
+      @include sp {
+        width: 100%;
+      }
+    }
+    &__btn {
+      margin-top: 6%;
+      text-align: right;
+    }
+  }
+  .actor {
+    overflow: hidden;
+    background: url(../images/voice_bg.png) no-repeat center/cover;
+    .sec-title {
+      text-align: center;
+    }
+    &__container {
+      padding: 4% 2% 6%;
+      @include sp {
+        padding: 4% 2% 10%;
+      }
+    }
+    &__list {
+      display: flex;
+      justify-content: center;
+      margin: 4% 0;
+      &-item {
+        width: 15%;
+        margin: 0 4%;
+        @include sp {
+          width: 20%;
+          margin: 8% 6%;
+        }
+      }
+    }
+    &__name {
+      margin-top: 4%;
+      text-align: center;
+    }
+    &__imgwrap {
+      border-radius: 50%;
+      box-shadow: 5px 5px 10px #ccc;
+    }
+    &__btn {
+      margin-top: 6%;
+      text-align: right;
+      .btn {
+        border-color: #333;
+        padding: 1% 4%;
+      }
+    }
+  }
+}
+.actor-page {
+  .actor {
+    background: url(../images/voice_bg.png) no-repeat center/cover;
+    @include sp {
+      padding-top: 20%;
+    }
+    &__container {
+      padding: 10% 0;
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      @include sp {
+        flex-wrap: wrap;
+        padding: 4%;
+      }
+      .tab {
+        width: 15%;
+        @include sp {
+          width: 30%;
+          margin-bottom: 4%;
+        }
+        .actor__imgwrap {
+          width: 75%;
+          border-radius: 50%;
+          box-shadow: 5px 5px 10px #ccc;
+        }
+      }
+    }
+    .panel-group {
+      margin-top: 4%;
+    }
+    .tab {
+      opacity: 0.7;
+    }
+    .tab.is-active {
+      opacity: 1;
+    }
+    .panel {
+      display: none;
+      &.is-show {
+        display: block;
+        animation: isShow 1s ease forwards;
+        @keyframes isShow {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &__card {
+      display: flex;
+      @include sp {
+        margin-top: 0%;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+    &__bigimgwrap {
+      width: 50%;
+      border-radius: 50%;
+      box-shadow: 5px 5px 10px #ccc;
+      img {
+        transition: all 0.5s;
+      }
+    }
+    &__text {
+      width: 90%;
+      padding: 4% 0 4% 6%;
+      @include sp {
+        width: 100%;
+        margin-top: 4%;
+        padding: 4%;
+      }
+    }
+    &__name {
+      font-size: 32px;
+      @include sp {
+        font-size: 24px;
+      }
+    }
+    &__detail {
+      margin-top: 2%;
+      line-height: 2em;
+    }
+    &__history {
+      padding: 4% 0;
+      @include sp {
+        width: 100%;
+        padding: 4%;
+      }
+      &-title {
+        font-size: 28px;
+        @include sp {
+          font-size: 24px;
+        }
+      }
+      &-detail {
+        margin-top: 2%;
+        line-height: 2em;
+      }
+    }
+    .imgOpacity {
+      opacity: 0;
+      transition: all 0.5;
+    }
+  }
+}
+.contact-page {
+  .contact {
+    background: url(../images/voice_bg.png) no-repeat center/cover;
+    padding: 8% 0;
+    &__name,
+    &__mail,
+    &__textarea {
+      width: 70%;
+      padding: 1%;
+      background: #fff;
+      border: 1px solid $borderColor;
+      border-radius: 5px;
+      @include sp {
+        width: 100%;
+        margin-top: 2%;
+      }
+    }
+    .sec-title {
+      text-align: center;
+      margin-bottom: 10%;
+    }
+    &__btn-wrap {
+      text-align: center;
+    }
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      margin: 6% auto;
+      font-size: 18px;
+      letter-spacing: 2px;
+      border-radius: 5px;
+      width: 200px;
+      height: 40px;
+      font-weight: bold;
+      border-bottom: 4px solid #179e43;
+      transition: 0.3s;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+      background-color: #19d256;
+      &:hover {
+        box-shadow: 0 0 rgba(0, 0, 0, 0.4);
+        border-bottom-width: 2px;
+        transform: translateY(2px);
+      }
+    }
+    &__container {
+      width: 50%;
+      @include sp {
+        width: 100%;
+        padding-top: 20%;
+      }
+    }
+    .send {
+      margin-bottom: 2%;
+    }
+    .program-wrap {
+      margin-bottom: 1%;
+    }
+    label[for="your-name"],
+    [for="e-mail"] {
+      display: inline-block;
+      width: 20%;
+      @include sp {
+        display: block;
+        width: 100%;
+      }
+    }
+    label[for="message"] {
+      vertical-align: top;
+      display: inline-block;
+      width: 20%;
+      @include sp {
+        display: block;
+        width: 100%;
+      }
+    }
+    &__textarea {
+      height: 200px;
+    }
+    .field-wrap {
+      margin-top: 4%;
+    }
+  }
+}
