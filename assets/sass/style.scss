@@ -197,8 +197,9 @@ body {
     overflow: hidden;
     .sec-title {
       text-align: center;
+      color: #fff;
     }
-    background: linear-gradient(#e7fcf8, #c4fa9d);
+    background: linear-gradient(#644948, #192237);
     &__list {
       margin-top: 2%;
       &-item {
@@ -271,6 +272,9 @@ body {
     &__btn {
       margin-top: 6%;
       text-align: right;
+      .btn {
+        border: 1px solid #333;
+      }
     }
   }
   .actor {

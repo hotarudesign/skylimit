@@ -51,7 +51,7 @@
   }
 }
 .footer__logo {
-  font-size: 30px;
+  width: 10%;
 }
 @media (max-width: 500px) {
   .footer__logo {
@@ -289,10 +289,11 @@ body {
 }
 .home .program {
   overflow: hidden;
-  background: linear-gradient(#e7fcf8, #c4fa9d);
+  background: linear-gradient(#644948, #192237);
 }
 .home .program .sec-title {
   text-align: center;
+  color: #fff;
 }
 .home .program__list {
   margin-top: 2%;
@@ -382,6 +383,9 @@ body {
 .home .program__btn {
   margin-top: 6%;
   text-align: right;
+}
+.home .program__btn .btn {
+  border: 1px solid #333;
 }
 .home .actor {
   overflow: hidden;
