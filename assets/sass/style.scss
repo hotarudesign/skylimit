@@ -82,7 +82,7 @@ body {
   .mv {
     position: relative;
     background: url(../images/fv_pc.jpg) no-repeat top/cover;
-    height: 100vh;
+    height: 120vh;
     &__hero {
       position: absolute;
       top: 64%;
@@ -109,6 +109,40 @@ body {
       font-size: 36px;
       padding-bottom: 10%;
       font-weight: bold;
+    }
+  }
+  .feature {
+    background: linear-gradient(#644948, #192237);
+    &__heading {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+    }
+    &__text {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.8%;
+      color: #fff;
+      &-logo {
+        width: 10%;
+      }
+    }
+    &__item {
+      padding: 2% 0;
+      margin-left: 1%;
+      width: 31%;
+      &:first-child {
+        margin-left: 0;
+      }
+      &-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+      &-desc {
+        margin-top: 0.8rem;
+        line-height: 1.8rem;
+      }
     }
   }
   .column {
@@ -212,16 +246,7 @@ body {
           flex-direction: column-reverse;
           margin-bottom: 10%;
         }
-        &:nth-child(odd) {
-          .program__img {
-            margin-left: 2%;
-            @include sp {
-              margin-left: 0;
-            }
-          }
-        }
         &:nth-child(even) {
-          flex-direction: row-reverse;
           @include sp {
             flex-direction: column-reverse;
           }
@@ -235,7 +260,7 @@ body {
       }
       &-textarea {
         width: 70%;
-        padding: 2% 2% 6%;
+        padding: 1.5% 2% 2%;
         background: rgba(255, 255, 255, 0.5);
         @include sp {
           width: 100%;
@@ -244,7 +269,7 @@ body {
       }
     }
     &__title {
-      font-size: 26px;
+      font-size: 22px;
       @include sp {
         font-size: 20px;
       }
@@ -263,7 +288,8 @@ body {
       }
     }
     &__img {
-      width: 40%;
+      margin-right: 4%;
+      width: 20%;
       box-shadow: 5px 5px 20px #999;
       @include sp {
         width: 100%;

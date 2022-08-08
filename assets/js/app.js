@@ -3,7 +3,7 @@ gsap.set(".js-hero-text", {
   opacity: 0,
 });
 
-gsap.set(".js-program-text_1", {
+gsap.set([".js-program-text_1", ".js-feature-heading"], {
   x: -200,
   opacity: 0,
 });
@@ -11,7 +11,7 @@ gsap.set(".js-program-text_2", {
   x: 200,
   opacity: 0,
 });
-gsap.set(".js-actor-list", {
+gsap.set([".js-actor-list", ".js-feature-item"], {
   y: 100,
   opacity: 0,
 });
@@ -23,6 +23,24 @@ gsap.to(".js-hero-text", {
   opacity: 1,
   duration: 0.4,
   stagger: 0.1,
+});
+gsap.to(".js-feature-heading", {
+  x: 0,
+  opacity: 1,
+  scrollTrigger: {
+    trigger: ".mv",
+    start: "bottom center",
+  },
+});
+gsap.to(".js-feature-item", {
+  y: 0,
+  opacity: 1,
+  stagger: 0.2,
+  delay: 0.3,
+  scrollTrigger: {
+    trigger: ".mv",
+    start: "bottom center",
+  },
 });
 gsap.to(".js-program-text_1", {
   x: 0,
