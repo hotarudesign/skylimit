@@ -26,9 +26,14 @@
     margin-top: 0.5%;
     &-item {
       margin: 0 4%;
+      letter-spacing: 0.1rem;
       @include sp {
         font-size: 14px;
       }
     }
   }
+}
+.header.active {
+  background: #333;
+  transition: 0.5s;
 }

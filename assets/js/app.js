@@ -108,3 +108,13 @@ document.addEventListener(
   },
   false
 );
+
+// headerスクロール背景変更
+const scrollHeader = document.getElementById("js-header");
+window.addEventListener("scroll", function () {
+  if (this.pageYOffset > 400) {
+    scrollHeader.classList.add("active");
+  } else {
+    scrollHeader.classList.remove("active");
+  }
+});

@@ -229,19 +229,18 @@ body {
   }
   .program {
     overflow: hidden;
+    background: #fff;
     .sec-title {
       text-align: center;
-      color: #fff;
+      color: #333;
     }
-    background: linear-gradient(#644948, #192237);
     &__list {
       margin-top: 2%;
       &-item {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        margin-top: 8%;
-        margin-bottom: 8%;
+        margin: 8% 0;
         @include sp {
           flex-direction: column-reverse;
           margin-bottom: 10%;
@@ -251,7 +250,6 @@ body {
             flex-direction: column-reverse;
           }
           .program__img {
-            margin-right: 2%;
             @include sp {
               margin-right: 0;
             }
@@ -275,7 +273,8 @@ body {
       }
     }
     &__onair-date {
-      margin-top: 2%;
+      margin-top: 1%;
+      font-size: 14px;
       @include sp {
         font-size: 12px;
       }
@@ -288,7 +287,7 @@ body {
       }
     }
     &__img {
-      margin-right: 4%;
+      margin-right: 2%;
       width: 20%;
       box-shadow: 5px 5px 20px #999;
       @include sp {
@@ -347,6 +346,9 @@ body {
   }
 }
 .actor-page {
+  .header {
+    background: #333;
+  }
   .actor {
     background: url(../images/voice_bg.png) no-repeat center/cover;
     @include sp {
@@ -458,6 +460,9 @@ body {
   }
 }
 .contact-page {
+  .header {
+    background: #333;
+  }
   .contact {
     background: url(../images/voice_bg.png) no-repeat center/cover;
     padding: 8% 0;
