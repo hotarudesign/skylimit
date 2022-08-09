@@ -18,6 +18,7 @@
     margin-bottom: 4%;
     &-item {
       margin: 2% 1% 0;
+      letter-spacing: 0.1rem;
       @include sp {
         font-size: 14px;
       }

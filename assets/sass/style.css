@@ -71,6 +71,7 @@
 }
 .footer__list-item {
   margin: 2% 1% 0;
+  letter-spacing: 0.1rem;
 }
 @media (max-width: 500px) {
   .footer__list-item {
@@ -362,8 +363,9 @@ body {
 }
 .home .program__list-textarea {
   width: 70%;
-  padding: 1.5% 2% 2%;
+  padding: 2% 2% 3%;
   background: rgba(255, 255, 255, 0.5);
+  box-shadow: 5px 5px 20px #999;
 }
 @media (max-width: 500px) {
   .home .program__list-textarea {
@@ -408,7 +410,7 @@ body {
   }
 }
 .home .program__btn {
-  margin-top: 6%;
+  margin-top: 4%;
   text-align: right;
 }
 .home .program__btn .btn {

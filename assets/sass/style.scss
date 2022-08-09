@@ -258,8 +258,9 @@ body {
       }
       &-textarea {
         width: 70%;
-        padding: 1.5% 2% 2%;
+        padding: 2% 2% 3%;
         background: rgba(255, 255, 255, 0.5);
+        box-shadow: 5px 5px 20px #999;
         @include sp {
           width: 100%;
           margin-top: 8%;
@@ -295,7 +296,7 @@ body {
       }
     }
     &__btn {
-      margin-top: 6%;
+      margin-top: 4%;
       text-align: right;
       .btn {
         border: 1px solid #333;

@@ -3,19 +3,11 @@ gsap.set(".js-hero-text", {
   opacity: 0,
 });
 
-gsap.set([".js-program-text_1", ".js-feature-heading"], {
+gsap.set(".js-feature-heading", {
   x: -200,
   opacity: 0,
 });
-gsap.set(".js-program-text_2", {
-  x: 200,
-  opacity: 0,
-});
 gsap.set([".js-actor-list", ".js-feature-item"], {
-  y: 100,
-  opacity: 0,
-});
-gsap.set([".js-program-img_1", ".js-program-img_2"], {
   y: 100,
   opacity: 0,
 });
@@ -40,42 +32,6 @@ gsap.to(".js-feature-item", {
   scrollTrigger: {
     trigger: ".mv",
     start: "bottom center",
-  },
-});
-gsap.to(".js-program-text_1", {
-  x: 0,
-  opacity: 1,
-  duration: 0.4,
-  scrollTrigger: {
-    trigger: ".program",
-    start: "top center",
-  },
-});
-gsap.to(".js-program-img_1", {
-  y: 0,
-  opacity: 1,
-  delay: 0.4,
-  scrollTrigger: {
-    trigger: ".program",
-    start: "top center",
-  },
-});
-gsap.to(".js-program-img_2", {
-  y: 0,
-  opacity: 1,
-  delay: 0.4,
-  scrollTrigger: {
-    trigger: ".program",
-    start: "center center",
-  },
-});
-gsap.to(".js-program-text_2", {
-  x: 0,
-  opacity: 1,
-  duration: 0.4,
-  scrollTrigger: {
-    trigger: ".program",
-    start: "center center",
   },
 });
 gsap.to(".js-actor-list", {
