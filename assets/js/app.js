@@ -74,3 +74,12 @@ window.addEventListener("scroll", function () {
     scrollHeader.classList.remove("active");
   }
 });
+
+// programスライダー
+$(".slide-items").slick({
+  autoplay: true,
+  autoplaySpeed: 2500,
+  dots: true,
+  slidesToShow: 3,
+  slidesToScrool: 1,
+});

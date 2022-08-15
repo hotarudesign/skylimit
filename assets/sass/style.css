@@ -329,43 +329,41 @@ body {
   border: 1px solid #e0dcdc;
 }
 .home .program {
-  overflow: hidden;
   background: #fff;
 }
 .home .program .sec-title {
   text-align: center;
   color: #333;
 }
-.home .program__list {
+.home .program .slide-items {
+  width: 100%;
+  height: auto;
   margin-top: 2%;
+  margin-right: auto;
+  margin-left: auto;
 }
-.home .program__list-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 8% 0;
+.home .program .slide-items li {
+  margin: 20px;
 }
-@media (max-width: 500px) {
-  .home .program__list-item {
-    flex-direction: column-reverse;
-    margin-bottom: 10%;
-  }
+.home .program .slide-items li img {
+  width: 100%;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-@media (max-width: 500px) {
-  .home .program__list-item:nth-child(even) {
-    flex-direction: column-reverse;
-  }
-}
-@media (max-width: 500px) {
-  .home .program__list-item:nth-child(even) .program__img {
-    margin-right: 0;
-  }
+.home .program .slick-dots {
+  display: flex !important;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
 }
 .home .program__list-textarea {
-  width: 70%;
-  padding: 2% 2% 3%;
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 5px 5px 20px #999;
+  padding: 3% 3% 6%;
+  box-shadow: 5px 5px 10px #ccc;
 }
 @media (max-width: 500px) {
   .home .program__list-textarea {
@@ -374,7 +372,7 @@ body {
   }
 }
 .home .program__title {
-  font-size: 22px;
+  font-size: 16px;
 }
 @media (max-width: 500px) {
   .home .program__title {
@@ -383,7 +381,7 @@ body {
 }
 .home .program__onair-date {
   margin-top: 1%;
-  font-size: 14px;
+  font-size: 12px;
 }
 @media (max-width: 500px) {
   .home .program__onair-date {
@@ -392,7 +390,8 @@ body {
 }
 .home .program__detail {
   margin-top: 2%;
-  line-height: 2em;
+  line-height: 1.8em;
+  font-size: 14px;
 }
 @media (max-width: 500px) {
   .home .program__detail {
@@ -400,9 +399,7 @@ body {
   }
 }
 .home .program__img {
-  margin-right: 2%;
-  width: 20%;
-  box-shadow: 5px 5px 20px #999;
+  box-shadow: 5px 0px 10px #ccc;
 }
 @media (max-width: 500px) {
   .home .program__img {
@@ -410,11 +407,18 @@ body {
   }
 }
 .home .program__btn {
-  margin-top: 4%;
   text-align: right;
+  margin-top: 8%;
 }
 .home .program__btn .btn {
   border: 1px solid #333;
+  font-size: 14px;
+}
+.home .program__btn .btn::before {
+  width: 20px;
+}
+.home .program__btn .btn::after {
+  top: 52%;
 }
 .home .actor {
   overflow: hidden;

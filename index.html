@@ -8,6 +8,21 @@
     <meta property="og:site_name" content="SKY LIMIT" />
     <meta property="og:image" content="./assets/images/favicon.jpg" />
     <link rel="stylesheet" href="./assets/sass/base/reset.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <link rel="stylesheet" href="./assets/sass/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap"
@@ -18,7 +33,7 @@
   <body class="home">
     <header class="header" id="js-header">
       <a class="logo header__logo" href="./index.html"
-        ><h1><img src="/assets/images/skylimit_logo-white.svg" alt="" /></h1
+        ><h1><img src="./assets/images/skylimit_logo-white.svg" alt="" /></h1
       ></a>
       <div id="jsNavBtn"><span></span><span></span><span></span></div>
       <nav class="header__g-nav" id="jsNavMenu">
@@ -133,8 +148,8 @@
     <section class="program">
       <div class="container program__container">
         <h2 class="sec-title">Program</h2>
-        <ul class="program__list">
-          <li class="program__list-item">
+        <ul class="slide-items">
+          <li>
             <figure class="program__img js-program-img_1">
               <img src="./assets/images/kurirazi.jpg" alt="" />
             </figure>
@@ -155,7 +170,43 @@
               </div>
             </div>
           </li>
-          <li class="program__list-item">
+          <li>
+            <figure class="program__img js-program-img_2">
+              <img src="./assets/images/tomokuntoissyo.png" alt="" />
+            </figure>
+            <div class="program__list-textarea js-program-text_2">
+              <h2 class="program__title">知くんと一緒 愛と希望の×××</h2>
+              <p class="program__onair-date">放送日：第一/第三 日曜日</p>
+              <p class="program__detail">
+                趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
+              </p>
+              <div class="program__btn">
+                <a href="" class="btn">最新話はこちら　</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <figure class="program__img js-program-img_1">
+              <img src="./assets/images/kurirazi.jpg" alt="" />
+            </figure>
+            <div class="program__list-textarea js-program-text_1">
+              <h2 class="program__title">
+                みさ吉とピュン太のクリエイターズラジオ
+              </h2>
+              <p class="program__onair-date">放送日：第一/第三 日曜日</p>
+              <p class="program__detail">
+                趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
+              </p>
+              <div class="program__btn">
+                <a
+                  href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82MjYzYzQ1Yy9wb2RjYXN0L3Jzcw?sa=X&ved=0CAMQ4aUDahcKEwjI3f-bmdb4AhUAAAAAHQAAAAAQLg"
+                  class="btn"
+                  >最新話はこちら　</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
             <figure class="program__img js-program-img_2">
               <img src="./assets/images/tomokuntoissyo.png" alt="" />
             </figure>
@@ -171,6 +222,7 @@
             </div>
           </li>
         </ul>
+        <ul class="slider_dots"></ul>
       </div>
     </section>
     <section class="actor">

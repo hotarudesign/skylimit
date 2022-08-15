@@ -228,39 +228,41 @@ body {
     }
   }
   .program {
-    overflow: hidden;
+    // overflow: hidden;
     background: #fff;
     .sec-title {
       text-align: center;
       color: #333;
     }
-    &__list {
+    .slide-items {
+      width: 100%;
+      height: auto;
       margin-top: 2%;
-      &-item {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin: 8% 0;
-        @include sp {
-          flex-direction: column-reverse;
-          margin-bottom: 10%;
-        }
-        &:nth-child(even) {
-          @include sp {
-            flex-direction: column-reverse;
-          }
-          .program__img {
-            @include sp {
-              margin-right: 0;
-            }
-          }
+      margin-right: auto;
+      margin-left: auto;
+      li {
+        margin: 20px;
+        img {
+          width: 100%;
+          height: 270px;
+          object-fit: cover;
         }
       }
+    }
+    .slick-dots {
+      display: flex !important;
+      justify-content: center;
+      margin-right: auto;
+      margin-left: auto;
+      bottom: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+    }
+    &__list {
       &-textarea {
-        width: 70%;
-        padding: 2% 2% 3%;
-        background: rgba(255, 255, 255, 0.5);
-        box-shadow: 5px 5px 20px #999;
+        padding: 3% 3% 6%;
+        box-shadow: 5px 5px 10px #ccc;
         @include sp {
           width: 100%;
           margin-top: 8%;
@@ -268,38 +270,44 @@ body {
       }
     }
     &__title {
-      font-size: 22px;
+      font-size: 16px;
       @include sp {
         font-size: 20px;
       }
     }
     &__onair-date {
       margin-top: 1%;
-      font-size: 14px;
+      font-size: 12px;
       @include sp {
         font-size: 12px;
       }
     }
     &__detail {
       margin-top: 2%;
-      line-height: 2em;
+      line-height: 1.8em;
+      font-size: 14px;
       @include sp {
         font-size: 14px;
       }
     }
     &__img {
-      margin-right: 2%;
-      width: 20%;
-      box-shadow: 5px 5px 20px #999;
+      box-shadow: 5px 0px 10px #ccc;
       @include sp {
         width: 100%;
       }
     }
     &__btn {
-      margin-top: 4%;
       text-align: right;
+      margin-top: 8%;
       .btn {
         border: 1px solid #333;
+        font-size: 14px;
+        &::before {
+          width: 20px;
+        }
+        &::after {
+          top: 52%;
+        }
       }
     }
   }
