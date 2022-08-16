@@ -75,6 +75,39 @@ window.addEventListener("scroll", function () {
   }
 });
 
+//ハンバーガーメニュー
+const html = document.querySelector("html");
+const jsBtn = document.getElementById("js-btn");
+const jsNav = document.getElementById("js-nav");
+const headerHeight = 0;
+let bodyHeight;
+let scrollpos;
+
+jsBtn.addEventListener("click", function () {
+  this.classList.toggle("is-active");
+  jsNav.classList.toggle("is-active");
+
+  if (jsBtn.classList.contains("is-active")) {
+    // 現在のスクロール位置を取得する
+    scrollpos = window.pageYOffset;
+    // メニューが開いたことを示すクラスをhtmlに付与する
+    html.classList.add("is-menuOpen");
+    // bodyのtopにスクロール位置を付与する
+    document.body.style.top = scrollpos * -1 + "px";
+    // ウィンドウの高さを取得
+    bodyHeight = window.innerHeight;
+    // 取得した高さを、メニューに付与する（ヘッダーの高さを引いた数）
+    jsNav.style.height = bodyHeight - headerHeight + "px";
+  } else {
+    // 閉じる処理
+    // メニューが開いたことを示すクラスをはずす
+    html.classList.remove("is-menuOpen");
+    // スクロール位置を開いた時の位置へ戻す
+    window.scrollTo(0, scrollpos);
+    jsNav.style.height = 100;
+  }
+});
+
 // programスライダー
 $(".slide-items").slick({
   autoplay: true,
@@ -82,4 +115,19 @@ $(".slide-items").slick({
   dots: true,
   slidesToShow: 3,
   slidesToScrool: 1,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        speed: 600,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 });
