@@ -7,8 +7,12 @@ gsap.set(".js-feature-heading", {
   x: -200,
   opacity: 0,
 });
-gsap.set([".js-actor-list", ".js-feature-item"], {
+gsap.set(".js-actor-list", {
   y: 100,
+  opacity: 0,
+});
+gsap.set(".js-feature-bg", {
+  x: 100,
   opacity: 0,
 });
 gsap.to(".js-hero-text", {
@@ -24,14 +28,13 @@ gsap.to(".js-feature-heading", {
     start: "bottom center",
   },
 });
-gsap.to(".js-feature-item", {
-  y: 0,
+gsap.to(".js-feature-bg", {
+  x: 0,
   opacity: 1,
-  stagger: 0.2,
-  delay: 0.3,
+  duration: 2,
   scrollTrigger: {
-    trigger: ".mv",
-    start: "bottom center",
+    trigger: ".feature__list",
+    start: "top center",
   },
 });
 gsap.to(".js-actor-list", {

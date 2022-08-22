@@ -16,11 +16,14 @@
     display: flex;
     justify-content: center;
     margin-bottom: 4%;
+    @include sp {
+      margin-top: 4%;
+    }
     &-item {
       margin: 2% 1% 0;
       letter-spacing: 0.1rem;
       @include sp {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }

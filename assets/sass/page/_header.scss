@@ -69,8 +69,10 @@
       right: -100%;
       width: 100vw;
       height: 100vh;
+      padding-top: 20%;
       background: #fff;
       transition: all 0.5s;
+      text-align: center;
       z-index: 15;
     }
     &.is-active {
@@ -78,18 +80,55 @@
       overflow-y: hidden;
       transition: all 0.5s;
     }
+    &-logo {
+      display: none;
+      @include sp {
+        display: block;
+      }
+    }
+    .sp-gnav-logo {
+      display: none;
+      @include sp {
+        display: inline-block;
+        width: 50%;
+      }
+    }
   }
   &__list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     margin-right: auto;
     margin-left: auto;
     margin-top: 0.5%;
+    @include sp {
+      flex-direction: column;
+      margin-top: 20%;
+      line-height: 4.5rem;
+      text-align: center;
+    }
     &-item {
+      position: relative;
       margin: 0 4%;
+      padding-bottom: 2%;
       letter-spacing: 0.1rem;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        display: inline-block;
+        width: 0%;
+        height: 1px;
+        background: #fff;
+        transition: 0.3s;
+      }
+      &:hover {
+        &:before {
+          width: 100%;
+          transition: 0.3s;
+        }
+      }
       @include sp {
-        font-size: 14px;
+        font-size: 24px;
         color: #333;
       }
     }
@@ -98,4 +137,9 @@
 .header.active {
   background: #333;
   transition: 0.5s;
+}
+.js-list-border {
+  &.is-active {
+    border-bottom: 1px solid #fff;
+  }
 }
