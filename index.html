@@ -10,19 +10,9 @@
     <link rel="stylesheet" href="./assets/sass/base/reset.css" />
     <link
       rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
     <link rel="stylesheet" href="./assets/sass/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap"
@@ -38,21 +28,21 @@
       <div id="js-btn" class="js-btn">
         <span></span><span></span><span></span>
       </div>
-      <nav class="header__g-nav" id="js-nav">
-        <a href="#" class="header__g-nav-logo"
+      <nav class="g-nav header__nav" id="js-nav">
+        <a href="#" class="g-nav__logo"
           ><img
-            class="sp-gnav-logo"
+            class="g-nav__logo"
             src="./assets/images/skylimit_logo-black.svg"
             alt=""
         /></a>
-        <ul class="header__list">
-          <li class="header__list-item js-list-border">
+        <ul class="g-nav__list">
+          <li class="g-nav__item js-list-border">
             <a href="">Program</a>
           </li>
-          <li class="header__list-item js-list-border">
+          <li class="g-nav__item js-list-border">
             <a href="./actor.html">Actor</a>
           </li>
-          <li class="header__list-item js-list-border">
+          <li class="g-nav__item js-list-border">
             <a href="./contact.html">Contact</a>
           </li>
         </ul>
@@ -60,9 +50,9 @@
     </header>
     <div class="mv">
       <div class="mv__sp">
-        <div class="mv__hero">
-          <hr class="mv__hr" />
-          <h2 class="mv__catch-copy">
+        <div class="hero">
+          <hr class="hero__hr" />
+          <h2 class="hero__copy">
             <span class="js-hero-text">限</span
             ><span class="js-hero-text">界</span
             ><span class="js-hero-text">は</span
@@ -70,131 +60,99 @@
             ><span class="js-hero-text">高</span
             ><span class="js-hero-text">く</span>
           </h2>
-          <hr class="mv__hr" />
+          <hr class="hero__hr" />
         </div>
       </div>
     </div>
     <section class="feature">
-      <div class="container feature__container">
-        <h3 class="feature__heading js-feature-heading">
-          <img
-            class="feature__logo"
-            src="./assets/images/skylimit_logo-white.svg"
-            alt=""
-          />では音響制作をメインとした活動をしています。
-        </h3>
-        <ul class="feature__list">
-          <li class="feature__item js-feature-item">
-            <!-- <div class="feature__item-bg js-feature-bg">
-              <img src="./assets/images/feature_img01.jpeg" alt="" />
-            </div> -->
-            <div class="feature__item-text">
-              <h3 class="feature__item-title">ラジオ制作</h3>
-              <p class="feature__item-desc">
-                企画立案、スタジオ収録、音声編集などラジオ制作を承っています。こんなラジオが作ってみたい！だけどノウハウがないという方、ぜひ一度ご相談ください！
-              </p>
-            </div>
-          </li>
-          <li class="feature__item js-feature-item">
-            <div class="feature__item-bg js-feature-bg">
-              <img src="./assets/images/feature_img02.jpeg" alt="" />
-            </div>
-            <h3 class="feature__item-title">歌制作</h3>
-            <p class="feature__item-desc">
+      <h2 class="heading js-feature-heading">
+        <img
+          class="heading__logo"
+          src="./assets/images/skylimit_logo-white.svg"
+          alt=""
+        />では音響制作をメインとした活動をしています。
+      </h2>
+      <ul class="column__list">
+        <li class="column__item">
+          <div class="column__bg column__bg01 js-column-bg01"></div>
+          <div class="column__text">
+            <h3 class="column__title js-column-title01">ラジオ制作</h3>
+            <p class="column__desc js-column-desc01">
+              企画立案、スタジオ収録、音声編集などラジオ制作を承っています。こんなラジオが作ってみたい！だけどノウハウがないという方、ぜひ一度ご相談ください！
+            </p>
+          </div>
+        </li>
+        <li class="column__item">
+          <div class="column__bg column__bg02 js-column-bg02"></div>
+          <div class="column__text">
+            <h3 class="column__title js-column-title02">歌制作</h3>
+            <p class="column__desc js-column-desc02">
               作曲、作詞、編曲、BGM制作など
               楽曲の制作を行っています。また、MVやPVなども制作しております。
             </p>
-          </li>
-          <li class="feature__item js-feature-item">
-            <div class="feature__item-bg js-feature-bg">
-              <img src="./assets/images/feature_img03.jpeg" alt="" />
-            </div>
-            <h3 class="feature__item-title">声優のキャスティング</h3>
-            <p class="feature__item-desc">
+          </div>
+        </li>
+        <li class="column__item">
+          <div class="column__bg column__bg03 js-column-bg03"></div>
+          <div class="column__text">
+            <h3 class="column__title js-column-title03">
+              声優のキャスティング
+            </h3>
+            <p class="column__desc js-column-desc03">
               声優へのオファー、音響監督を付けてのスタジオ収録、など制作した作品のキャスティングを行っています。どういう風に演技を指示したらよいかわからない、そもそも声優のつてがないなどお悩みの方、私共と交友のある声優さんをご紹介します。
             </p>
-          </li>
-        </ul>
-      </div>
+          </div>
+        </li>
+      </ul>
     </section>
     <section class="program">
       <div class="container program__container">
         <h2 class="sec-title">Program</h2>
-        <ul class="slide-items">
-          <li>
-            <figure class="program__img js-program-img_1">
-              <img src="./assets/images/kurirazi.jpg" alt="" />
-            </figure>
-            <div class="program__list-textarea js-program-text_1">
-              <h2 class="program__title">
-                みさ吉とピュン太のクリエイターズラジオ
-              </h2>
-              <p class="program__onair-date">放送日：第一/第三 日曜日</p>
-              <p class="program__detail">
-                趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
-              </p>
-              <div class="program__btn">
-                <a
-                  href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82MjYzYzQ1Yy9wb2RjYXN0L3Jzcw?sa=X&ved=0CAMQ4aUDahcKEwjI3f-bmdb4AhUAAAAAHQAAAAAQLg"
-                  class="btn"
-                  >最新話はこちら　</a
-                >
+        <div class="swiper-coverflow carousel">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide card">
+                <figure class="card__img">
+                  <img src="./assets/images/kurirazi.jpg" alt="" />
+                </figure>
+                <div class="card__text">
+                  <h2 class="card__title">
+                    みさ吉とピュン太のクリエイターズラジオ
+                  </h2>
+                  <p class="card__date">放送日：第一/第三 日曜日</p>
+                  <p class="card__detail">
+                    趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
+                  </p>
+                  <div class="card__btn">
+                    <a
+                      href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82MjYzYzQ1Yy9wb2RjYXN0L3Jzcw?sa=X&ved=0CAMQ4aUDahcKEwjI3f-bmdb4AhUAAAAAHQAAAAAQLg"
+                      class="btn"
+                      >最新話はこちら　</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide card">
+                <figure class="card__img">
+                  <img src="./assets/images/tomokuntoissyo.png" alt="" />
+                </figure>
+                <div class="card__text">
+                  <h2 class="card__title">知くんと一緒 愛と希望の×××</h2>
+                  <p class="card__date">放送日：第一/第三 日曜日</p>
+                  <p class="card__detail">
+                    趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
+                  </p>
+                  <div class="card__btn">
+                    <a href="" class="btn">最新話はこちら　</a>
+                  </div>
+                </div>
               </div>
             </div>
-          </li>
-          <li>
-            <figure class="program__img js-program-img_2">
-              <img src="./assets/images/tomokuntoissyo.png" alt="" />
-            </figure>
-            <div class="program__list-textarea js-program-text_2">
-              <h2 class="program__title">知くんと一緒 愛と希望の×××</h2>
-              <p class="program__onair-date">放送日：第一/第三 日曜日</p>
-              <p class="program__detail">
-                趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
-              </p>
-              <div class="program__btn">
-                <a href="" class="btn">最新話はこちら　</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <figure class="program__img js-program-img_1">
-              <img src="./assets/images/kurirazi.jpg" alt="" />
-            </figure>
-            <div class="program__list-textarea js-program-text_1">
-              <h2 class="program__title">
-                みさ吉とピュン太のクリエイターズラジオ
-              </h2>
-              <p class="program__onair-date">放送日：第一/第三 日曜日</p>
-              <p class="program__detail">
-                趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
-              </p>
-              <div class="program__btn">
-                <a
-                  href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82MjYzYzQ1Yy9wb2RjYXN0L3Jzcw?sa=X&ved=0CAMQ4aUDahcKEwjI3f-bmdb4AhUAAAAAHQAAAAAQLg"
-                  class="btn"
-                  >最新話はこちら　</a
-                >
-              </div>
-            </div>
-          </li>
-          <li>
-            <figure class="program__img js-program-img_2">
-              <img src="./assets/images/tomokuntoissyo.png" alt="" />
-            </figure>
-            <div class="program__list-textarea js-program-text_2">
-              <h2 class="program__title">知くんと一緒 愛と希望の×××</h2>
-              <p class="program__onair-date">放送日：第一/第三 日曜日</p>
-              <p class="program__detail">
-                趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
-              </p>
-              <div class="program__btn">
-                <a href="" class="btn">最新話はこちら　</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <ul class="slider_dots"></ul>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="actor">
@@ -289,6 +247,7 @@
       </ul>
       <small>&copy; SKY LIMIT All Rights Reserved.</small>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/gsap.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js"></script>
     <script src="./assets/js/app.js"></script>

@@ -62,7 +62,7 @@
       }
     }
   }
-  &__g-nav {
+  .g-nav {
     @include sp {
       position: absolute;
       top: 0;
@@ -80,33 +80,33 @@
       overflow-y: hidden;
       transition: all 0.5s;
     }
-    &-logo {
+    &__logo {
       display: none;
       @include sp {
         display: block;
       }
     }
-    .sp-gnav-logo {
+    &__logo {
       display: none;
       @include sp {
         display: inline-block;
         width: 50%;
       }
     }
-  }
-  &__list {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 0.5%;
-    @include sp {
-      flex-direction: column;
-      margin-top: 20%;
-      line-height: 4.5rem;
-      text-align: center;
+    &__list {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 0.5%;
+      @include sp {
+        flex-direction: column;
+        margin-top: 20%;
+        line-height: 4.5rem;
+        text-align: center;
+      }
     }
-    &-item {
+    &__item {
       position: relative;
       margin: 0 4%;
       padding-bottom: 2%;

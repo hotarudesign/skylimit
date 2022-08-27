@@ -2,23 +2,9 @@
 gsap.set(".js-hero-text", {
   opacity: 0,
 });
-
 gsap.set(".js-feature-heading", {
   x: -200,
   opacity: 0,
-});
-gsap.set(".js-actor-list", {
-  y: 100,
-  opacity: 0,
-});
-gsap.set(".js-feature-bg", {
-  x: 100,
-  opacity: 0,
-});
-gsap.to(".js-hero-text", {
-  opacity: 1,
-  duration: 0.4,
-  stagger: 0.1,
 });
 gsap.to(".js-feature-heading", {
   x: 0,
@@ -28,14 +14,112 @@ gsap.to(".js-feature-heading", {
     start: "bottom center",
   },
 });
-gsap.to(".js-feature-bg", {
-  x: 0,
+gsap.set([".js-column-bg01", ".js-column-bg02", ".js-column-bg03"], {
+  opacity: 0,
+});
+gsap.set(
+  [
+    ".js-column-title01",
+    ".js-column-desc01",
+    ".js-column-title02",
+    ".js-column-desc02",
+    ".js-column-title03",
+    ".js-column-desc03",
+  ],
+  {
+    x: 100,
+    opacity: 0,
+  }
+);
+gsap.to(".js-column-bg01", {
   opacity: 1,
-  duration: 2,
+  delay: 1.2,
+  duration: 3,
   scrollTrigger: {
-    trigger: ".feature__list",
+    trigger: ".js-feature-heading",
     start: "top center",
   },
+});
+gsap.to(".js-column-bg02", {
+  opacity: 1,
+  delay: 1.2,
+  duration: 3,
+  scrollTrigger: {
+    trigger: ".js-feature-heading",
+    start: "center top",
+  },
+});
+gsap.to(".js-column-bg03", {
+  opacity: 1,
+  delay: 1.4,
+  duration: 3,
+  scrollTrigger: {
+    trigger: ".js-feature-heading",
+    start: "bottom top",
+  },
+});
+gsap.to(".js-column-title01", {
+  x: 0,
+  delay: 0.5,
+  opacity: 1,
+  scrollTrigger: {
+    trigger: ".js-feature-heading",
+    start: "top center",
+  },
+});
+gsap.to(".js-column-desc01", {
+  x: 0,
+  delay: 1,
+  opacity: 1,
+  scrollTrigger: {
+    trigger: ".js-feature-heading",
+    start: "top center",
+  },
+});
+gsap.to(".js-column-title02", {
+  x: 0,
+  delay: 0.5,
+  opacity: 1,
+  scrollTrigger: {
+    trigger: ".js-feature-heading",
+    start: "center top",
+  },
+});
+gsap.to(".js-column-desc02", {
+  x: 0,
+  delay: 1,
+  opacity: 1,
+  scrollTrigger: {
+    trigger: ".js-feature-heading",
+    start: "center top",
+  },
+});
+gsap.to(".js-column-title03", {
+  x: 0,
+  delay: 1.5,
+  opacity: 1,
+  scrollTrigger: {
+    trigger: ".js-feature-heading",
+    start: "bottom top",
+  },
+});
+gsap.to(".js-column-desc03", {
+  x: 0,
+  delay: 2,
+  opacity: 1,
+  scrollTrigger: {
+    trigger: ".js-feature-heading",
+    start: "bottom top",
+  },
+});
+gsap.set(".js-actor-list", {
+  y: 100,
+  opacity: 0,
+});
+gsap.to(".js-hero-text", {
+  opacity: 1,
+  duration: 0.4,
+  stagger: 0.1,
 });
 gsap.to(".js-actor-list", {
   y: 0,
@@ -112,25 +196,24 @@ jsBtn.addEventListener("click", function () {
 });
 
 // programスライダー
-$(".slide-items").slick({
-  autoplay: true,
-  autoplaySpeed: 2500,
-  dots: true,
-  slidesToShow: 3,
-  slidesToScrool: 1,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        speed: 600,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
+const swiper = new Swiper(".swiper-container", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  // 前後スライドボタンを表示
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  loop: true, // ループの有効化
+  slidesPerView: 2.5, // 表示するスライドの枚数
+  centeredSlides: true, // スライドを中央揃えを有効化
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 0, // スライドの回転角度
+    stretch: 50, // スライドの間隔（px単位）
+    depth: 200, // 奥行きの設定（translateをZ方向にpx単位で移動）
+    modifier: 1, //
+    slideShadows: true, // 先頭スライドのbox-shadowを有効化
+  },
 });
