@@ -206,7 +206,7 @@ const swiper = new Swiper(".swiper-container", {
     prevEl: ".swiper-button-prev",
   },
   loop: true, // ループの有効化
-  slidesPerView: 2.5, // 表示するスライドの枚数
+  slidesPerView: 1, // 表示するスライドの枚数
   centeredSlides: true, // スライドを中央揃えを有効化
   effect: "coverflow",
   coverflowEffect: {
@@ -215,5 +215,11 @@ const swiper = new Swiper(".swiper-container", {
     depth: 200, // 奥行きの設定（translateをZ方向にpx単位で移動）
     modifier: 1, //
     slideShadows: true, // 先頭スライドのbox-shadowを有効化
+  },
+  breakpoints: {
+    // スライドの表示枚数：500px以上の場合
+    500: {
+      slidesPerView: 2.5,
+    },
   },
 });

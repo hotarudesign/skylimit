@@ -16,19 +16,44 @@
     <title>SKY LIMIT</title>
   </head>
   <body class="actor-page">
-    <header class="header">
+    <header class="header" id="js-header">
       <a class="logo header__logo" href="./index.html"
         ><h1><img src="./assets/images/skylimit_logo-white.svg" alt="" /></h1
       ></a>
-      <div id="jsNavBtn"><span></span><span></span><span></span></div>
-      <nav class="header__g-nav" id="jsNavMenu">
-        <ul class="header__list">
-          <li class="header__list-item"><a href="">Program</a></li>
-          <li class="header__list-item"><a href="./actor.html">Actor</a></li>
-          <li class="header__list-item">
+      <div id="js-btn" class="js-btn">
+        <span></span><span></span><span></span>
+      </div>
+      <nav class="g-nav header__nav" id="js-nav">
+        <a href="#" class="g-nav__logo"
+          ><img
+            class="g-nav__logo"
+            src="./assets/images/skylimit_logo-white.svg"
+            alt=""
+        /></a>
+        <ul class="g-nav__list">
+          <li class="g-nav__item js-list-border">
+            <a href="">Program</a>
+          </li>
+          <li class="g-nav__item js-list-border">
+            <a href="./actor.html">Actor</a>
+          </li>
+          <li class="g-nav__item js-list-border">
             <a href="./contact.html">Contact</a>
           </li>
         </ul>
+        <div class="g-nav__bottom">
+          <div class="g-nav__comment">
+            <a href="#" class="g-nav__btn"> 放送中ラジオはコチラ！ </a>
+          </div>
+          <div class="sp-only g-nav__imgwrap">
+            <div class="g-nav__img">
+              <img src="./assets/images/misaki.png" alt="" />
+            </div>
+            <div class="g-nav__img">
+              <img src="./assets/images/pyunta.png" alt="" />
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <section class="actor">
