@@ -6,6 +6,10 @@
 
 html {
   font-size: 100%;
+  &.is-menuOpen {
+    position: fixed;
+    overflow-y: hidden;
+  }
 }
 img {
   max-width: 100%;
