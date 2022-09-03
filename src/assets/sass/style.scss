@@ -32,7 +32,7 @@ body {
     display: block;
   }
 }
-.container {
+.inner {
   max-width: 1280px;
   margin-right: auto;
   margin-left: auto;
@@ -44,7 +44,7 @@ body {
 }
 .logo {
   display: inline-block;
-  width: 10%;
+  // width: 10%;
   text-align: center;
   @include sp {
     width: 20%;
@@ -102,12 +102,17 @@ body {
 }
 .home {
   .mv {
-    position: relative;
     background: url(../images/fv_pc.jpg) no-repeat top/cover;
-    height: 120vh;
     @include sp {
       background: url(../images/fv_sp.png) no-repeat center/cover;
       height: 100vh;
+    }
+    &__inner {
+      position: relative;
+      height: 120vh;
+      @include sp {
+        height: 100vh;
+      }
     }
     .hero {
       position: absolute;
@@ -115,8 +120,10 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 0 2%;
+      width: 100%;
       letter-spacing: 10px;
       color: #fff;
+      text-align: center;
       @include sp {
         flex-direction: column;
         top: 60%;
@@ -125,57 +132,48 @@ body {
       }
       &__copy {
         display: inline-block;
-      }
-      &__hr {
-        display: inline-block;
-        width: 50px;
-        margin-bottom: 3%;
-        @include sp {
-          width: 20px;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        &:first-child {
+          font-size: 52px;
+        }
+        &:not(:first-child) {
+          margin: 2% 0 0 0;
         }
       }
-      &__copy {
-        font-size: 36px;
-        padding-bottom: 10%;
-        font-weight: bold;
-      }
-    }
-  }
-
-  .feature {
-    overflow-x: hidden;
-    padding: 3% 0;
-    background: linear-gradient(#644948, #192237);
-    @include sp {
-      padding: 8% 0 20%;
-    }
-    .heading {
-      font-size: 1.8rem;
-      font-weight: bold;
-      text-align: center;
-      color: #fff;
-      @include sp {
-        padding: 0 2%;
-        font-size: 20px;
-        line-height: 1.7em;
-      }
       &__logo {
-        width: 10%;
+        display: inline-block;
+        margin: 0 1.5% 0 0;
+        width: 15%;
+        vertical-align: middle;
         @include sp {
           width: 22%;
         }
       }
     }
   }
+
+  .feature {
+    overflow-x: hidden;
+    background: linear-gradient(#644948, #192237);
+    @include sp {
+      padding: 8% 0 20%;
+    }
+  }
   .column {
     &__list {
       display: flex;
+      justify-content: space-between;
       flex-direction: column;
-      margin: 4% 0 0 0;
     }
     &__item {
       position: relative;
       color: #fff;
+      width: 100%;
+      &:nth-child(even) .column__text {
+        left: 50%;
+      }
       &:last-child .column__text {
         @include sp {
           top: 50%;
@@ -183,7 +181,7 @@ body {
       }
     }
     &__bg {
-      height: 40vh;
+      height: 45vh;
       filter: brightness(80%);
     }
     &__bg01 {
@@ -198,9 +196,10 @@ body {
     &__text {
       position: absolute;
       top: 48%;
-      left: 20%;
+      left: 10%;
       transform: translateY(-50%);
-      width: 60%;
+      padding: 0 2%;
+      width: 55%;
       @include sp {
         left: 5%;
         width: 90%;
@@ -343,11 +342,12 @@ body {
 }
 .actor {
   overflow: hidden;
+  padding: 80px 0 0 0;
   background: url(../images/voice_bg.png) no-repeat center/cover;
   .sec-title {
     text-align: center;
   }
-  &__container {
+  &__inner {
     padding: 4% 2% 6%;
     @include sp {
       padding: 14% 2%;
@@ -368,6 +368,7 @@ body {
   }
   &__name {
     margin-top: 4%;
+    font-size: 20px;
     text-align: center;
   }
   &__imgwrap {
@@ -385,7 +386,7 @@ body {
 }
 .sidebar {
   background: #fafafa;
-  &__container {
+  &__inner {
     display: flex;
     justify-content: space-between;
     @include sp {
@@ -548,6 +549,7 @@ body {
     }
     &__name {
       font-size: 32px;
+      text-align: left;
       @include sp {
         font-size: 24px;
       }
@@ -556,21 +558,13 @@ body {
       margin-top: 2%;
       line-height: 2em;
     }
-    &__history {
-      padding: 4% 0;
-      @include sp {
-        width: 100%;
-        padding: 4%;
+    .history {
+      margin: 2% 0 0 0;
+      &__ttl {
+        font-size: 24px;
       }
-      &-title {
-        font-size: 28px;
-        @include sp {
-          font-size: 24px;
-        }
-      }
-      &-detail {
-        margin-top: 2%;
-        line-height: 2em;
+      &__content {
+        padding: 2% 0 0;
       }
     }
     .imgOpacity {

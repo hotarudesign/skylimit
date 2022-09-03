@@ -1,18 +1,27 @@
 "use strict";
+gsap.set(".js-hero", {
+  opacity: 0,
+});
 gsap.set(".js-hero-text", {
+  x: -100,
   opacity: 0,
 });
-gsap.set(".js-feature-heading", {
-  x: -200,
+gsap.set(".js-carousel", {
+  y: 100,
   opacity: 0,
 });
-gsap.to(".js-feature-heading", {
-  x: 0,
+gsap.to(".js-carousel", {
+  y: 0,
   opacity: 1,
   scrollTrigger: {
-    trigger: ".mv",
-    start: "bottom center",
+    trigger: ".program",
+    start: "top center",
   },
+});
+gsap.to(".js-hero-text", {
+  x: 0,
+  opacity: 1,
+  delay: 1,
 });
 gsap.set([".js-column-bg01", ".js-column-bg02", ".js-column-bg03"], {
   opacity: 0,
@@ -36,7 +45,7 @@ gsap.to(".js-column-bg01", {
   delay: 1.2,
   duration: 3,
   scrollTrigger: {
-    trigger: ".js-feature-heading",
+    trigger: ".feature",
     start: "top center",
   },
 });
@@ -45,17 +54,17 @@ gsap.to(".js-column-bg02", {
   delay: 1.2,
   duration: 3,
   scrollTrigger: {
-    trigger: ".js-feature-heading",
-    start: "center top",
+    trigger: ".js-column-bg01",
+    start: "center center",
   },
 });
 gsap.to(".js-column-bg03", {
   opacity: 1,
-  delay: 1.4,
+  delay: 1.2,
   duration: 3,
   scrollTrigger: {
-    trigger: ".js-feature-heading",
-    start: "bottom top",
+    trigger: ".js-column-bg02",
+    start: "center center",
   },
 });
 gsap.to(".js-column-title01", {
@@ -63,7 +72,7 @@ gsap.to(".js-column-title01", {
   delay: 0.5,
   opacity: 1,
   scrollTrigger: {
-    trigger: ".js-feature-heading",
+    trigger: ".feature",
     start: "top center",
   },
 });
@@ -72,7 +81,7 @@ gsap.to(".js-column-desc01", {
   delay: 1,
   opacity: 1,
   scrollTrigger: {
-    trigger: ".js-feature-heading",
+    trigger: ".feature",
     start: "top center",
   },
 });
@@ -81,8 +90,8 @@ gsap.to(".js-column-title02", {
   delay: 0.5,
   opacity: 1,
   scrollTrigger: {
-    trigger: ".js-feature-heading",
-    start: "center top",
+    trigger: ".js-column-title01",
+    start: "bottom center",
   },
 });
 gsap.to(".js-column-desc02", {
@@ -90,33 +99,33 @@ gsap.to(".js-column-desc02", {
   delay: 1,
   opacity: 1,
   scrollTrigger: {
-    trigger: ".js-feature-heading",
-    start: "center top",
+    trigger: ".js-column-title01",
+    start: "bottom center",
   },
 });
 gsap.to(".js-column-title03", {
   x: 0,
-  delay: 1.5,
+  delay: 0.5,
   opacity: 1,
   scrollTrigger: {
-    trigger: ".js-feature-heading",
-    start: "bottom top",
+    trigger: ".js-column-title02",
+    start: "bottom center",
   },
 });
 gsap.to(".js-column-desc03", {
   x: 0,
-  delay: 2,
+  delay: 1,
   opacity: 1,
   scrollTrigger: {
-    trigger: ".js-feature-heading",
-    start: "bottom top",
+    trigger: ".js-column-title02",
+    start: "bottom center",
   },
 });
 gsap.set(".js-actor-list", {
   y: 100,
   opacity: 0,
 });
-gsap.to(".js-hero-text", {
+gsap.to(".js-hero", {
   opacity: 1,
   duration: 0.4,
   stagger: 0.1,
@@ -131,6 +140,7 @@ gsap.to(".js-actor-list", {
   },
 });
 
+// actorタブメニュー
 document.addEventListener(
   "DOMContentLoaded",
   function () {

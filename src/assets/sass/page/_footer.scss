@@ -1,13 +1,15 @@
 .footer {
-  padding: 3% 0 1%;
   background: #333;
   color: #fff;
   text-align: center;
   @include sp {
     padding: 4%;
   }
+  &__inner {
+    padding: 2%;
+  }
   &__logo {
-    width: 10%;
+    width: 15%;
     @include sp {
       font-size: 22px;
     }

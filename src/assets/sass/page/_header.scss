@@ -11,6 +11,9 @@
   @include sp {
     padding: 4% 2%;
   }
+  &__logo {
+    width: 10%;
+  }
   .js-btn {
     display: none;
     position: relative;
