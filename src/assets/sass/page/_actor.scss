@@ -1,0 +1,200 @@
+.home {
+  .actor {
+    overflow: hidden;
+    padding: 8% 0 0;
+    background: url(../images/voice_bg.png) no-repeat center/cover;
+    @include sp {
+      padding: 4% 0 0;
+    }
+    .sec-title {
+      text-align: center;
+    }
+    &__inner {
+      padding: 4% 2% 6%;
+      @include sp {
+        padding: 14% 2%;
+      }
+    }
+    &__list {
+      display: flex;
+      justify-content: center;
+      margin: 4% 0;
+      &-item {
+        width: 15%;
+        margin: 0 4%;
+        @include sp {
+          width: 30%;
+          margin: 8% 6%;
+        }
+      }
+    }
+    &__name {
+      margin-top: 4%;
+      font-size: 20px;
+      text-align: center;
+      @include sp {
+        font-size: 16px;
+      }
+    }
+    &__imgwrap {
+      border-radius: 50%;
+      box-shadow: 5px 5px 10px #ccc;
+    }
+    &__btn {
+      margin-top: 6%;
+      text-align: right;
+      .btn {
+        border-color: #ccc;
+        padding: 1% 10% 1% 4%;
+        &:before {
+          @include sp {
+            right: 10px;
+          }
+        }
+        &:after {
+          @include sp {
+            top: 16px;
+            right: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+// .actor-page
+.actor-page {
+  .header {
+    background: #333;
+  }
+  .actor {
+    padding: 8% 0 0;
+    background: url(../images/voice_bg.png) no-repeat center/cover;
+    @include sp {
+      padding-top: 20%;
+    }
+    &__container {
+      padding: 10% 0;
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      padding: 4% 0 0;
+      @include sp {
+        flex-wrap: wrap;
+        padding: 4%;
+      }
+      .tab {
+        width: 15%;
+        @include sp {
+          width: 30%;
+          margin-bottom: 4%;
+        }
+        .actor__imgwrap {
+          width: 75%;
+          border-radius: 50%;
+          box-shadow: 5px 5px 10px #ccc;
+        }
+      }
+    }
+    .panel-group {
+      margin-top: 4%;
+    }
+    .tab {
+      opacity: 0.7;
+    }
+    .tab.is-active {
+      opacity: 1;
+    }
+    .panel {
+      display: none;
+      &.is-show {
+        display: block;
+        animation: isShow 1s ease forwards;
+        @keyframes isShow {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &__card {
+      display: flex;
+      align-items: flex-start;
+      @include sp {
+        flex-direction: column;
+        margin-top: 0%;
+        align-items: center;
+      }
+    }
+    &__bigimgwrap {
+      position: relative;
+      width: 50%;
+      border-radius: 50%;
+      box-shadow: 5px 5px 10px #ccc;
+      img {
+        transition: all 0.5s;
+      }
+    }
+    &__text {
+      width: 90%;
+      padding: 4% 0 4% 6%;
+      @include sp {
+        width: 100%;
+        margin-top: 4%;
+        padding: 4%;
+      }
+    }
+    &__name {
+      font-size: 32px;
+      text-align: left;
+      @include sp {
+        font-size: 24px;
+      }
+    }
+    &__detail {
+      margin-top: 2%;
+      line-height: 2em;
+    }
+    &__personal {
+      margin: 2% 0 0;
+      line-height: 1.7;
+      dt,
+      dd {
+        display: inline-block;
+      }
+      dt {
+        width: 20%;
+      }
+      dd {
+        width: 70%;
+      }
+    }
+    .history {
+      margin: 2% 0 0 0;
+      &__ttl {
+        font-size: 24px;
+      }
+      &__content {
+        padding: 2% 0 0;
+      }
+      &__sub-cat {
+        display: inline-block;
+        margin: 1% 0 0;
+        padding: 0.5% 1%;
+        border-radius: 5px;
+        background: rgb(89, 2, 6);
+        color: #fff;
+      }
+      &__txt {
+        line-height: 2;
+      }
+    }
+    .imgOpacity {
+      opacity: 0;
+      transition: all 0.5;
+    }
+  }
+}

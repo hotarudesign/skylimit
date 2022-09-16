@@ -1,0 +1,103 @@
+.contact-page {
+  .header {
+    background: #333;
+  }
+  .contact {
+    background: url(../images/voice_bg.png) no-repeat center/cover;
+    padding: 8% 0;
+    &__name,
+    &__mail,
+    &__textarea {
+      width: 70%;
+      padding: 1%;
+      background: #fff;
+      border: 1px solid $borderColor;
+      border-radius: 5px;
+      @include sp {
+        width: 100%;
+        margin-top: 2%;
+      }
+    }
+    .sec-title {
+      text-align: center;
+      margin-bottom: 10%;
+    }
+    &__btn-wrap {
+      text-align: center;
+    }
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      margin: 6% auto;
+      font-size: 18px;
+      letter-spacing: 2px;
+      border-radius: 5px;
+      width: 200px;
+      height: 40px;
+      font-weight: bold;
+      border-bottom: 4px solid #179e43;
+      transition: 0.3s;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+      background-color: #19d256;
+      &:hover {
+        box-shadow: 0 0 rgba(0, 0, 0, 0.4);
+        border-bottom-width: 2px;
+        transform: translateY(2px);
+      }
+    }
+    &__container {
+      width: 50%;
+      @include sp {
+        width: 100%;
+        padding-top: 20%;
+      }
+    }
+    .send {
+      margin: 0 auto 2%;
+      width: 47%;
+      @include sp {
+        width: 100%;
+      }
+    }
+    .program-wrap {
+      margin: 0 auto 1%;
+      width: 47%;
+      @include sp {
+        width: 100%;
+        line-height: 1.7;
+      }
+    }
+    label[for="your-name"],
+    [for="e-mail"] {
+      display: inline-block;
+      margin: 0 5% 0;
+      width: 10%;
+      @include sp {
+        display: block;
+        width: 100%;
+      }
+    }
+    label[for="message"] {
+      vertical-align: top;
+      display: inline-block;
+      margin: 0 5% 0;
+      width: 10%;
+      @include sp {
+        display: block;
+        width: 100%;
+      }
+    }
+    &__textarea {
+      height: 200px;
+    }
+    .field-wrap {
+      margin: 4% auto;
+      width: 80%;
+      @include sp {
+        width: 100%;
+      }
+    }
+  }
+}

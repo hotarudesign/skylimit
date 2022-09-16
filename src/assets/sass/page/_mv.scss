@@ -1,0 +1,65 @@
+.home {
+  .mv {
+    background: url(../images/fv_pc.jpg) no-repeat top/cover;
+    @include sp {
+      background: url(../images/fv_sp.png) no-repeat center/cover;
+      height: 100vh;
+    }
+    &__inner {
+      position: relative;
+      height: 120vh;
+      @include sp {
+        height: 100vh;
+      }
+    }
+    .hero {
+      position: absolute;
+      top: 64%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0 2%;
+      width: 100%;
+      letter-spacing: 10px;
+      color: #fff;
+      text-align: center;
+      @include sp {
+        flex-direction: column;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+      }
+      &__copy {
+        display: inline-block;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        @include sp {
+          font-size: 24px;
+          letter-spacing: 0.08em;
+        }
+        &:first-child {
+          font-size: 52px;
+          @include sp {
+            font-size: 36px;
+          }
+        }
+        &:not(:first-child) {
+          margin: 2% 0 0;
+          @include sp {
+            margin: 10% 0 0;
+            line-height: 1.7;
+          }
+        }
+      }
+      &__logo {
+        display: inline-block;
+        margin: 0 1.5% 0 0;
+        width: 15%;
+        vertical-align: middle;
+        @include sp {
+          width: 22%;
+        }
+      }
+    }
+  }
+}

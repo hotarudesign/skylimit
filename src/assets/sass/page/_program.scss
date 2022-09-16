@@ -1,0 +1,200 @@
+.home {
+  .program {
+    overflow: hidden;
+    background: #fff;
+    padding: 8% 0 20%;
+    .sec-title {
+      text-align: center;
+      color: #333;
+    }
+    .carousel {
+      margin: 4% auto 0;
+      width: 80%;
+      height: 540px;
+      @include sp {
+        margin: 8% auto 0;
+        width: 100%;
+      }
+      &-wrapper {
+        position: relative;
+        width: 100%;
+      }
+    }
+    .swiper {
+      &-slide {
+        width: 40% !important;
+        @include sp {
+          width: 100% !important;
+        }
+      }
+      &-pagination {
+        bottom: -40px;
+        z-index: 10;
+      }
+      &-button-prev {
+        @include sp {
+          left: 0px;
+          --swiper-navigation-size: 20px;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          border-radius: 50px;
+          background: #ccc;
+          opacity: 0.7;
+          z-index: -1;
+          @include sp {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+      &-button-next {
+        @include sp {
+          right: 0px;
+          --swiper-navigation-size: 20px;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          border-radius: 50px;
+          background: #ccc;
+          opacity: 0.7;
+          z-index: -1;
+          @include sp {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .card {
+      box-shadow: 0 0 10px #ccc;
+      &__img {
+        img {
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+        }
+      }
+      &__text {
+        padding: 2% 2% 8%;
+        background: #fff;
+        @include sp {
+          padding: 4% 4% 8%;
+        }
+      }
+      &__title {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      &__date {
+        margin-top: 0.5%;
+        font-size: 12px;
+      }
+      &__detail {
+        margin-top: 1.5%;
+        line-height: 1.8em;
+        font-size: 14px;
+      }
+      &__btn {
+        text-align: right;
+        margin: 8% 2% 0;
+        .btn {
+          border: 1px solid #333;
+          font-size: 14px;
+          &::before {
+            width: 20px;
+          }
+          &::after {
+            top: 52%;
+          }
+        }
+      }
+    }
+  }
+}
+.program-page {
+  .header {
+    background: #333;
+  }
+  .sec-title {
+    text-align: center;
+  }
+  .program {
+    padding: 8% 0 0;
+    background: url(../images/voice_bg.png) no-repeat center/cover;
+    &__list {
+      display: flex;
+      flex-direction: column;
+      margin: 4% 0 0;
+      @include sp {
+        margin: 12% 0 0;
+      }
+    }
+    &__item {
+      display: flex;
+      align-items: flex-start;
+      margin: 4% 0 0;
+      @include sp {
+        flex-direction: column;
+        align-items: center;
+        margin: 20% 0 0;
+      }
+      &:first-child {
+        margin: 0;
+      }
+      &-img {
+        width: 40%;
+        @include sp {
+          width: 70%;
+        }
+      }
+      &-text {
+        padding: 2%;
+        @include sp {
+          padding: 2%;
+        }
+      }
+      &-ttl {
+        font-weight: bold;
+        font-size: 30px;
+        @include sp {
+          margin: 4% 0 0;
+          font-size: 24px;
+        }
+      }
+      &-date {
+        margin: 1% 0 0;
+      }
+      &-detail {
+        margin: 3% 0 0;
+        @include sp {
+          line-height: 1.7;
+        }
+      }
+    }
+    &__btn {
+      margin: 10% 0 0;
+      text-align: right;
+    }
+    .btn {
+      &::before {
+        @include sp {
+          right: 10px;
+        }
+      }
+      &::after {
+        @include sp {
+          right: 8px;
+        }
+      }
+    }
+  }
+}

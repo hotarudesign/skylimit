@@ -18,10 +18,11 @@
       href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
     <title>SKY LIMIT</title>
   </head>
   <body class="home">
-    <header class="header" id="js-header">
+    <header class="header js-header" id="js-header">
       <a class="logo header__logo" href="./index.html"
         ><h1><img src="./assets/images/skylimit_logo-white.svg" alt="" /></h1
       ></a>
@@ -29,7 +30,7 @@
         <span></span><span></span><span></span>
       </div>
       <nav class="g-nav header__nav" id="js-nav">
-        <a href="#" class="g-nav__logo"
+        <a href="./index.html" class="g-nav__logo"
           ><img
             class="g-nav__logo"
             src="./assets/images/skylimit_logo-white.svg"
@@ -37,10 +38,13 @@
         /></a>
         <ul class="g-nav__list">
           <li class="g-nav__item js-list-border">
-            <a href="">Program</a>
+            <a href="./program.html">Program</a>
           </li>
           <li class="g-nav__item js-list-border">
             <a href="./actor.html">Actor</a>
+          </li>
+          <li class="g-nav__item js-list-border">
+            <a href="./news.html">News</a>
           </li>
           <li class="g-nav__item js-list-border">
             <a href="./contact.html">Contact</a>
@@ -94,7 +98,9 @@
                 class="pc-only"
               />ラジオ制作を承っています。<br
                 class="pc-only"
-              />こんなラジオが作ってみたい！だけどノウハウがないという方、ぜひ一度ご相談ください！
+              />こんなラジオが作ってみたい！だけどノウハウがないという方、<br
+                class="pc-only"
+              />ぜひ一度ご相談ください！
             </p>
           </div>
         </li>
@@ -134,6 +140,25 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide card">
                 <figure class="card__img">
+                  <img src="./assets/images/program_img02.png" alt="" />
+                </figure>
+                <div class="card__text">
+                  <h2 class="card__title">知くんと一緒 愛と希望の×××</h2>
+                  <p class="card__date">放送日：第一/第三 日曜日</p>
+                  <p class="card__detail">
+                    趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
+                  </p>
+                  <div class="card__btn">
+                    <a
+                      href="https://anchor.fm/creators-radio/episodes/ep-e1k9ppr"
+                      class="btn"
+                      >最新話はこちら　</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide card">
+                <figure class="card__img">
                   <img src="./assets/images/program_img01.jpg" alt="" />
                 </figure>
                 <div class="card__text">
@@ -155,21 +180,6 @@
               </div>
               <div class="swiper-slide card">
                 <figure class="card__img">
-                  <img src="./assets/images/program_img02.png" alt="" />
-                </figure>
-                <div class="card__text">
-                  <h2 class="card__title">知くんと一緒 愛と希望の×××</h2>
-                  <p class="card__date">放送日：第一/第三 日曜日</p>
-                  <p class="card__detail">
-                    趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
-                  </p>
-                  <div class="card__btn">
-                    <a href="" class="btn">最新話はこちら　</a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide card">
-                <figure class="card__img">
                   <img src="./assets/images/program_img03.jpg" alt="" />
                 </figure>
                 <div class="card__text">
@@ -179,7 +189,11 @@
                     趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
                   </p>
                   <div class="card__btn">
-                    <a href="" class="btn">最新話はこちら　</a>
+                    <a
+                      href="https://youtube.com/playlist?list=PLP09kTsFaaqtS5VdPGy6c2yNgVrG_v5Ua"
+                      class="btn"
+                      >最新話はこちら　</a
+                    >
                   </div>
                 </div>
               </div>
@@ -211,7 +225,7 @@
             <figure class="actor__imgwrap">
               <img src="./assets/images/voice_3.png" alt="" />
             </figure>
-            <p class="actor__name">テキストテキスト</p>
+            <p class="actor__name">テキスト</p>
           </li>
         </ul>
         <div class="actor__btn">
@@ -273,13 +287,16 @@
       </div>
     </section>
     <footer class="footer">
-      <div class="inner footer__inner">
+      <div class="footer__inner inner">
         <a class="logo footer__logo" href="./index.html"
           ><img src="./assets/images/skylimit_logo-white.svg" alt=""
         /></a>
         <ul class="footer__list">
-          <li class="footer__list-item"><a href="">Program</a></li>
+          <li class="footer__list-item">
+            <a href="./program.html">Program</a>
+          </li>
           <li class="footer__list-item"><a href="./actor.html">Actor</a></li>
+          <li class="footer__list-item"><a href="./news.html">News</a></li>
           <li class="footer__list-item">
             <a href="./contact.html">Contact</a>
           </li>
