@@ -127,7 +127,9 @@
 
 @media (max-width: 500px) { .home .column__desc { font-size: 18px; } }
 
-.home .program { overflow: hidden; background: #fff; padding: 8% 0 20%; }
+.home .program { overflow: hidden; background: #fff; padding: 8% 0; }
+
+@media (max-width: 500px) { .home .program { padding: 8% 0 20%; } }
 
 .home .program .sec-title { text-align: center; color: #333; }
 
