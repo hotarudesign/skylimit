@@ -93,9 +93,7 @@
     &__list {
       display: flex;
       justify-content: flex-end;
-      margin-right: auto;
-      margin-left: auto;
-      margin-top: 0.5%;
+      margin: 0.5% auto 0;
       @include sp {
         flex-direction: column;
         margin-top: 20%;
@@ -108,6 +106,10 @@
       margin: 0 4%;
       padding-bottom: 2%;
       letter-spacing: 0.1rem;
+      font-family: "Dancing Script", cursive;
+      @include sp {
+        font-size: 40px;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -126,9 +128,6 @@
           width: 100%;
           transition: 0.3s;
         }
-      }
-      @include sp {
-        font-size: 18px;
       }
     }
     &__bottom {

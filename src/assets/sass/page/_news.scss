@@ -3,20 +3,22 @@
     background: #333;
   }
   .news {
-    padding: 8% 0 0;
+    padding: 8% 0 4%;
     background: url(../images/voice_bg.png) no-repeat center/cover;
-  }
-  .news {
     @include sp {
       width: 100%;
+    }
+    .sec-title {
+      font-size: 70px;
+      text-align: center;
     }
     &__block {
       width: 100%;
       background: #fff;
-      border-radius: 5px;
+      border-radius: 25px;
       margin-top: 2%;
       padding: 2% 2% 4%;
-      border: 1px solid $borderColor;
+      box-shadow: 0 0 20px #e7e7e7;
       table {
         width: 100%;
       }

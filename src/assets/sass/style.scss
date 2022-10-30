@@ -13,6 +13,7 @@
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
   &.is-menuOpen {
     position: fixed;
     overflow-y: hidden;
@@ -72,6 +73,9 @@ body {
     height: 1px;
     background: #333;
     transition: all 0.5s;
+    @include sp {
+      width: 20px;
+    }
   }
   &::after {
     content: "";
@@ -101,9 +105,35 @@ body {
   }
 }
 .sec-title {
-  font-size: 32px;
+  font-size: 60px;
   font-weight: bold;
+  font-family: "Dancing Script", cursive;
   @include sp {
+    font-size: 50px;
     text-align: center;
+  }
+}
+.page-top {
+  position: fixed;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  right: 0;
+  bottom: 0;
+  background: #333;
+  transition: 0.3s;
+  opacity: 0;
+  cursor: pointer;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
   }
 }

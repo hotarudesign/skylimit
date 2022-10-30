@@ -196,21 +196,13 @@ jsBtn.addEventListener("click", function () {
   jsNav.classList.toggle("is-active");
 
   if (jsBtn.classList.contains("is-active")) {
-    // 現在のスクロール位置を取得する
     scrollpos = window.pageYOffset;
-    // メニューが開いたことを示すクラスをhtmlに付与する
     html.classList.add("is-menuOpen");
-    // bodyのtopにスクロール位置を付与する
     document.body.style.top = scrollpos * -1 + "px";
-    // ウィンドウの高さを取得
     bodyHeight = window.innerHeight;
-    // 取得した高さを、メニューに付与する（ヘッダーの高さを引いた数）
     jsNav.style.height = bodyHeight - headerHeight + "px";
   } else {
-    // 閉じる処理
-    // メニューが開いたことを示すクラスをはずす
     html.classList.remove("is-menuOpen");
-    // スクロール位置を開いた時の位置へ戻す
     window.scrollTo(0, scrollpos);
     jsNav.style.height = 100;
   }
@@ -221,27 +213,40 @@ const swiper = new Swiper(".swiper-container", {
   pagination: {
     el: ".swiper-pagination",
   },
-  // 前後スライドボタンを表示
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  loop: false, // ループの有効化
-  slidesPerView: 1, // 表示するスライドの枚数
-  centeredSlides: true, // スライドを中央揃えを有効化
+  loop: true,
+  slidesPerView: 1.1,
+  centeredSlides: true,
   effect: "coverflow",
   initialSlide: 1,
   coverflowEffect: {
-    rotate: 0, // スライドの回転角度
-    stretch: 50, // スライドの間隔（px単位）
-    depth: 200, // 奥行きの設定（translateをZ方向にpx単位で移動）
-    modifier: 1, //
-    slideShadows: true, // 先頭スライドのbox-shadowを有効化
+    rotate: 0,
+    stretch: 50,
+    depth: 200,
+    modifier: 1,
+    slideShadows: true,
   },
   breakpoints: {
-    // スライドの表示枚数：500px以上の場合
     500: {
-      slidesPerView: 2.5,
+      slidesPerView: 1.3,
     },
   },
 });
+
+// ページトップ
+const pageTopBtn = document.querySelector(".page-top");
+pageTopBtn.addEventListener("click", scrollTop);
+function scrollTop() {
+  window.scroll({ top: 0, befavior: "smooth" });
+}
+window.addEventListener("scroll", scrollEvent);
+function scrollEvent() {
+  if (window.pageYOffset > 100) {
+    pageTopBtn.style.opacity = "1";
+  } else if (window.pageYOffset < 100) {
+    pageTopBtn.style.opacity = "0";
+  }
+}

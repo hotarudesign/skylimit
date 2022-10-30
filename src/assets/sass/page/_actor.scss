@@ -4,7 +4,7 @@
     padding: 8% 0 0;
     background: url(../images/voice_bg.png) no-repeat center/cover;
     @include sp {
-      padding: 4% 0 0;
+      padding: 8% 0;
     }
     .sec-title {
       text-align: center;
@@ -67,13 +67,17 @@
     background: #333;
   }
   .actor {
-    padding: 8% 0 0;
+    padding: 8% 0 4%;
     background: url(../images/voice_bg.png) no-repeat center/cover;
     @include sp {
       padding-top: 20%;
     }
     &__container {
       padding: 10% 0;
+    }
+    .sec-title {
+      font-size: 70px;
+      text-align: center;
     }
     &__list {
       display: flex;
@@ -85,6 +89,12 @@
       }
       .tab {
         width: 15%;
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+          pointer-events: none;
+        }
         @include sp {
           width: 30%;
           margin-bottom: 4%;
@@ -144,7 +154,7 @@
       @include sp {
         width: 100%;
         margin-top: 4%;
-        padding: 4%;
+        padding: 0;
       }
     }
     &__name {
@@ -154,42 +164,84 @@
         font-size: 24px;
       }
     }
-    &__detail {
-      margin-top: 2%;
-      line-height: 2em;
-    }
-    &__personal {
+    &__personal__list {
       margin: 2% 0 0;
       line-height: 1.7;
-      dt,
-      dd {
+      &-ttl,
+      &-desc {
         display: inline-block;
+        vertical-align: top;
       }
-      dt {
-        width: 20%;
+      &-ttl {
+        width: 25%;
       }
-      dd {
-        width: 70%;
+      &-desc {
+        width: 73%;
       }
     }
     .history {
+      display: flex;
+      justify-content: space-between;
       margin: 2% 0 0 0;
+      @include sp {
+        flex-direction: column;
+      }
       &__ttl {
         font-size: 24px;
+        @include sp {
+          margin: 4% 0 0;
+        }
       }
-      &__content {
+      &__cat {
+        margin: 2% 0 0;
+        @include sp {
+          margin: 4% 0 0;
+        }
+      }
+      &__container {
         padding: 2% 0 0;
+        width: 50%;
+        @include sp {
+          width: 100%;
+        }
+        &__list {
+          padding: 2% 0 0;
+          line-height: 2;
+          @include sp {
+            width: 100%;
+          }
+          &-ttl {
+            display: inline-block;
+            width: 49%;
+            font-size: 14px;
+            @include sp {
+              display: block;
+              margin: 2% 0 0;
+              width: 100%;
+              font-size: 18px;
+            }
+          }
+          &-desc {
+            display: inline-block;
+            width: 50%;
+            font-size: 14px;
+            vertical-align: top;
+            @include sp {
+              display: block;
+              margin: -1% 0 0;
+              width: 100%;
+              font-size: 16px;
+            }
+          }
+        }
       }
       &__sub-cat {
         display: inline-block;
-        margin: 1% 0 0;
+        margin: 2% 0 0;
         padding: 0.5% 1%;
         border-radius: 5px;
         background: rgb(89, 2, 6);
         color: #fff;
-      }
-      &__txt {
-        line-height: 2;
       }
     }
     .imgOpacity {

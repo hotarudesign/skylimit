@@ -9,16 +9,21 @@
     <meta property="og:image" content="./assets/images/favicon.jpg" />
     <link rel="stylesheet" href="./assets/sass/base/reset.css" />
     <link rel="stylesheet" href="./assets/sass/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Kaisei+Decol:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <title>SKY LIMIT</title>
+    <title>SKY LIMIT | Actor</title>
   </head>
   <body class="actor-page">
     <header class="header" id="js-header">
       <a class="logo header__logo" href="./index.html"
-        ><h1><img src="./assets/images/skylimit_logo-white.svg" alt="" /></h1
+        ><h1>
+          <img
+            src="./assets/images/skylimit_logo-white.svg"
+            alt="skylimit"
+          /></h1
       ></a>
       <div id="js-btn" class="js-btn">
         <span></span><span></span><span></span>
@@ -28,7 +33,7 @@
           ><img
             class="g-nav__logo"
             src="./assets/images/skylimit_logo-white.svg"
-            alt=""
+            alt="skylimit"
         /></a>
         <ul class="g-nav__list">
           <li class="g-nav__item js-list-border">
@@ -46,15 +51,17 @@
         </ul>
         <div class="g-nav__bottom">
           <div class="g-nav__comment">
-            <a href="#" class="g-nav__btn"> 放送中ラジオはコチラ！ </a>
+            <a href="./program.html" class="g-nav__btn">
+              放送中ラジオはコチラ！
+            </a>
           </div>
           <div class="sp-only g-nav__imgwrap">
-            <div class="g-nav__img">
+            <figure class="g-nav__img">
               <img src="./assets/images/misaki.png" alt="" />
-            </div>
-            <div class="g-nav__img">
+            </figure>
+            <figure class="g-nav__img">
               <img src="./assets/images/pyunta.png" alt="" />
-            </div>
+            </figure>
           </div>
         </div>
       </nav>
@@ -65,32 +72,32 @@
         <ul class="actor__list">
           <li class="tab tab-A is-active js-actor-list">
             <figure class="actor__imgwrap">
-              <img src="./assets/images/voice_1.png" alt="" />
+              <img src="./assets/images/misaki_avatar.svg" alt="" />
             </figure>
           </li>
           <li class="tab tab-B js-actor-list">
             <figure class="actor__imgwrap">
-              <img src="./assets/images/voice_2.png" alt="" />
+              <img src="./assets/images/kinsei_avatar.svg" alt="" />
             </figure>
           </li>
           <li class="tab tab-C js-actor-list">
             <figure class="actor__imgwrap">
-              <img src="./assets/images/voice_3.png" alt="" />
+              <img src="./assets/images/preparation.svg" alt="" />
             </figure>
           </li>
           <li class="tab tab-D js-actor-list">
             <figure class="actor__imgwrap">
-              <img src="./assets/images/voice_1.png" alt="" />
+              <img src="./assets/images/preparation.svg" alt="" />
             </figure>
           </li>
           <li class="tab tab-E js-actor-list">
             <figure class="actor__imgwrap">
-              <img src="./assets/images/voice_2.png" alt="" />
+              <img src="./assets/images/preparation.svg" alt="" />
             </figure>
           </li>
           <li class="tab tab-F js-actor-list">
             <figure class="actor__imgwrap">
-              <img src="./assets/images/voice_3.png" alt="" />
+              <img src="./assets/images/preparation.svg" alt="" />
             </figure>
           </li>
         </ul>
@@ -98,56 +105,177 @@
           <div class="panel tab-A is-show">
             <div class="actor__card">
               <figure class="actor__bigimgwrap" id="js-bigImg">
-                <img src="./assets/images/voice_1.png" alt="" />
+                <img src="./assets/images/misaki_avatar.svg" alt="" />
               </figure>
               <div class="actor__text">
                 <h2 class="actor__name">銀星 岬</h2>
-                <p class="actor__detail">
-                  テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                </p>
-                <dl class="actor__personal">
-                  <dt>誕生日</dt>
-                  <dd>4月15日</dd>
-                  <dt>出身地</dt>
-                  <dd>千葉県</dd>
-                  <dt>趣味・特技</dt>
-                  <dd>
-                    歌、散歩、吉本新喜劇、ネーミング、タイピング、関西弁(えせ)
+                <dl class="actor__personal__list">
+                  <dt class="actor__personal__list-ttl">誕生日</dt>
+                  <dd class="actor__personal__list-desc">4月15日</dd>
+                  <dt class="actor__personal__list-ttl">出身地</dt>
+                  <dd class="actor__personal__list-desc">千葉県</dd>
+                  <dt class="actor__personal__list-ttl">趣味・特技</dt>
+                  <dd class="actor__personal__list-desc">
+                    歌、散歩、吉本新喜劇、ネーミング、タイピング
                   </dd>
+                  <dt class="actor__personal__list-ttl">関西弁</dt>
+                  <dd class="actor__personal__list-desc">えせ</dd>
                 </dl>
               </div>
             </div>
             <div class="history">
-              <h3 class="history__ttl">出演</h3>
-              <div class="history__content">
-                <h3 class="history__cat">●ゲーム●</h3>
+              <div class="history__container">
+                <h3 class="history__ttl">出演</h3>
+                <p class="history__cat">●ゲーム●</p>
                 <p class="history__sub-cat">同人ゲーム</p>
-                <p class="history__txt">
-                  「蒼き薔薇のテラリウム」 マーキス、老兵 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「三つ葉のプリンシパル」 先生 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「破天荒チルドレン」 朝賀海成 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「スノードロップの贈り方2」 木村一 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「LUMINUS NOCTURNA」 男子生徒 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「サプリ万能な世の中で」 鮭川諒也 役 (CURARE)
-                </p>
-                <p class="history__txt">「U.G.D」 落合虎男 役 (CURARE)</p>
+                <dl class="history__container__list">
+                  <dt class="history__container__list-ttl">
+                    「蒼き薔薇のテラリウム」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    マーキス、老兵 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「三つ葉のプリンシパル」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    先生 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「破天荒チルドレン」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    朝賀海成 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「スノードロップの贈り方2」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    木村一 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「LUMINUS NOCTURNA」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    男子生徒 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「サプリ万能な世の中で」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    鮭川諒也 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">「U.G.D」</dt>
+                  <dd class="history__container__list-desc">
+                    落合虎男 役 (CURARE)
+                  </dd>
+                </dl>
+                <p class="history__cat">●ボイスドラマ●</p>
+                <dl class="history__container__list">
+                  <dt class="history__container__list-ttl">
+                    「H.P -The Last Hope-」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    アバリシア 役 (CURARE)
+                  </dd>
+                </dl>
+              </div>
+              <div class="history__container">
+                <h3 class="history__ttl">制作</h3>
+                <p class="history__cat">●ゲーム●</p>
+                <p class="history__sub-cat">同人ゲーム</p>
+                <dl class="history__container__list">
+                  <dt class="history__container__list-ttl">
+                    「蒼き薔薇のテラリウム」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    音響監督 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「三つ葉のプリンシパル」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    音響監督 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「CHIN☆POCO~妖精さんのお茶会~」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    スクリプト、音響監督 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「マジックアワーの願いごと」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    音響監督 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「破天荒チルドレン」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    音響監督 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「リロケーション・リスタート!」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    音声編集 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「スノードロップの贈り方」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    演出、音響監督 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「LUMINUS NOCTURNA」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    演出、音響監督 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「SITLUS – シトラス -」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    ディレクター、音響監督 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「サプリ万能な世の中で」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    ディレクター、音響監督 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">「U.G.D」</dt>
+                  <dd class="history__container__list-desc">
+                    音響監督、脚本 (CURARE)
+                  </dd>
+                </dl>
+                <p class="history__cat">●ボイスドラマ●</p>
+                <dl class="history__container__list">
+                  <dt class="history__container__list-ttl">
+                    「隠絵 ~Double image~」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    ディレクター、音響監督 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">「カレカノ」</dt>
+                  <dd class="history__container__list-desc">
+                    ディレクター、音響監督 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「H.P -The Last Hope-」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    ディレクター、音響監督 (CURARE)
+                  </dd>
+                </dl>
               </div>
             </div>
           </div>
           <div class="panel tab-B">
             <div class="actor__card">
               <figure class="actor__bigimgwrap" id="js-bigImg">
-                <img src="./assets/images/voice_2.png" alt="" />
+                <img src="./assets/images/kinsei_avatar.svg" alt="" />
               </figure>
               <div class="actor__text">
                 <h2 class="actor__name">金生 健志</h2>
@@ -162,62 +290,93 @@
                   長兄や保護者など、10 代~20 代の男性役を演じることが多い。
                   落ち着いたキャラクターに加え、主人公の親友などギャグキャラクターも演じる。
                 </p>
-                <dl class="actor__personal">
-                  <dt>誕生日</dt>
-                  <dd>4月17日</dd>
-                  <dt>出身地</dt>
-                  <dd>千葉県</dd>
-                  <dt>趣味・特技</dt>
-                  <dd>ゲーム、読書、筋トレ、食べ歩き</dd>
+                <dl class="actor__personal__list">
+                  <dt class="actor__personal__list-ttl">誕生日</dt>
+                  <dd class="actor__personal__list-desc">4月17日</dd>
+                  <dt class="actor__personal__list-ttl">出身地</dt>
+                  <dd class="actor__personal__list-desc">千葉県</dd>
+                  <dt class="actor__personal__list-ttl">趣味・特技</dt>
+                  <dd class="actor__personal__list-desc">
+                    ゲーム、読書、筋トレ、食べ歩き
+                  </dd>
                 </dl>
               </div>
             </div>
             <div class="history">
-              <h3 class="history__ttl">出演</h3>
-              <div class="history__content">
+              <div class="history__container">
+                <h3 class="history__ttl">出演</h3>
                 <h3 class="history__cat">●ゲーム●</h3>
                 <p class="history__sub-cat">同人ゲーム</p>
-                <p class="history__txt">
-                  「蒼き薔薇のテラリウム」 レスリー 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「三つ葉のプリンシパル」 水無颯太 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「CHIN☆POCO~妖精さんのお茶会~」 マスカレード 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「マジックアワーの願いごと」 堀川悟 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「破天荒チルドレン」 霧生稔 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「スノードロップの贈り方」 相川海人 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「LUMINUS NOCTURNA」 灰枝光弥 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「サプリ万能な世の中で」 鮭川諒也 役 (CURARE)
-                </p>
-                <p class="history__txt">
-                  「天から落ちたキューピッド~ハートの矢を探せ ナレーション
-                </p>
-              </div>
-              <div class="history__content">
-                <h3 class="history__cat">●ドラマ CD●</h3>
-                <p class="history__txt">「カレカノ」 お供系彼氏 役 (CURARE)</p>
-                <p class="history__txt">
-                  「H.P -The Last Hope-」 フィディス 役 (CURARE)
-                </p>
+                <dl class="history__container__list">
+                  <dt class="history__container__list-ttl">
+                    「蒼き薔薇のテラリウム」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    レスリー 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「三つ葉のプリンシパル」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    水無颯太 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「CHIN☆POCO~妖精さんのお茶会~」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    マスカレード 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「マジックアワーの願いごと」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    堀川悟 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「破天荒チルドレン」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    霧生稔 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「スノードロップの贈り方」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    相川海人 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「LUMINUS NOCTURNA」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    灰枝光弥 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「サプリ万能な世の中で」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    鮭川諒也 役 (CURARE)
+                  </dd>
+                </dl>
+                <h3 class="history__cat">●ドラマCD●</h3>
+                <dl class="history__container__list">
+                  <dt class="history__container__list-ttl">「カレカノ」</dt>
+                  <dd class="history__container__list-desc">
+                    お供系彼氏 役 (CURARE)
+                  </dd>
+                  <dt class="history__container__list-ttl">
+                    「H.P -The Last Hope-」
+                  </dt>
+                  <dd class="history__container__list-desc">
+                    フィディス 役 (CURARE)
+                  </dd>
+                </dl>
               </div>
             </div>
           </div>
           <div class="panel tab-C">
             <div class="actor__card">
               <figure class="actor__bigimgwrap" id="js-bigImg">
-                <img src="./assets/images/voice_3.png" alt="" />
+                <img src="./assets/images/preparation.svg" alt="" />
               </figure>
               <div class="actor__text">
                 <h2 class="actor__name">テキストテキスト</h2>
@@ -236,7 +395,7 @@
           <div class="panel tab-D">
             <div class="actor__card">
               <figure class="actor__bigimgwrap" id="js-bigImg">
-                <img src="./assets/images/voice_1.png" alt="" />
+                <img src="./assets/images/preparation.svg" alt="" />
               </figure>
               <div class="actor__text">
                 <h2 class="actor__name">テキストテキスト</h2>
@@ -255,7 +414,7 @@
           <div class="panel tab-E">
             <div class="actor__card">
               <figure class="actor__bigimgwrap" id="js-bigImg">
-                <img src="./assets/images/voice_2.png" alt="" />
+                <img src="./assets/images/preparation.svg" alt="" />
               </figure>
               <div class="actor__text">
                 <h2 class="actor__name">テキストテキスト</h2>
@@ -274,7 +433,7 @@
           <div class="panel tab-F">
             <div class="actor__card">
               <figure class="actor__bigimgwrap" id="js-bigImg">
-                <img src="./assets/images/voice_3.png" alt="" />
+                <img src="./assets/images/preparation.svg" alt="" />
               </figure>
               <div class="actor__text">
                 <h2 class="actor__name">テキストテキスト</h2>
@@ -296,7 +455,7 @@
     <footer class="footer">
       <div class="inner footer__inner">
         <a class="logo footer__logo" href="./index.html"
-          ><img src="./assets/images/skylimit_logo-white.svg" alt=""
+          ><img src="./assets/images/skylimit_logo-white.svg" alt="skylimit"
         /></a>
         <ul class="footer__list">
           <li class="footer__list-item">

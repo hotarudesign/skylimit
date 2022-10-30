@@ -12,10 +12,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
     <link rel="stylesheet" href="./assets/sass/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Kaisei+Decol:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
@@ -24,7 +24,11 @@
   <body class="home">
     <header class="header js-header" id="js-header">
       <a class="logo header__logo" href="./index.html"
-        ><h1><img src="./assets/images/skylimit_logo-white.svg" alt="" /></h1
+        ><h1>
+          <img
+            src="./assets/images/skylimit_logo-white.svg"
+            alt="skylimit"
+          /></h1
       ></a>
       <div id="js-btn" class="js-btn">
         <span></span><span></span><span></span>
@@ -34,7 +38,7 @@
           ><img
             class="g-nav__logo"
             src="./assets/images/skylimit_logo-white.svg"
-            alt=""
+            alt="skylimit"
         /></a>
         <ul class="g-nav__list">
           <li class="g-nav__item js-list-border">
@@ -52,15 +56,17 @@
         </ul>
         <div class="g-nav__bottom">
           <div class="g-nav__comment">
-            <a href="#" class="g-nav__btn"> 放送中ラジオはコチラ！ </a>
+            <a href="./program.html" class="g-nav__btn">
+              放送中ラジオはコチラ！
+            </a>
           </div>
           <div class="sp-only g-nav__imgwrap">
-            <div class="g-nav__img">
+            <figure class="g-nav__img">
               <img src="./assets/images/misaki.png" alt="" />
-            </div>
-            <div class="g-nav__img">
+            </figure>
+            <figure class="g-nav__img">
               <img src="./assets/images/pyunta.png" alt="" />
-            </div>
+            </figure>
           </div>
         </div>
       </nav>
@@ -69,18 +75,16 @@
       <div class="inner mv__inner">
         <div class="mv__sp">
           <div class="hero">
-            <!-- <hr class="hero__hr" /> -->
             <h2 class="hero__copy">
               <span class="js-hero">限</span><span class="js-hero">界</span
               ><span class="js-hero">は</span><span class="js-hero">空</span
               ><span class="js-hero">高</span><span class="js-hero">く</span>
             </h2>
-            <!-- <hr class="hero__hr" /> -->
             <h2 class="hero__copy js-hero-text">
               <img
                 class="hero__logo"
                 src="./assets/images/skylimit_logo-white.svg"
-                alt=""
+                alt="skylimit"
               />では音響制作をメインとした活動をしています。
             </h2>
           </div>
@@ -133,75 +137,81 @@
       </ul>
     </section>
     <section class="program">
-      <div class="inner program__inner">
-        <h2 class="sec-title">Program</h2>
-        <div class="swiper-coverflow carousel js-carousel">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide card">
-                <figure class="card__img">
+      <h2 class="sec-title">Program</h2>
+      <div class="swiper-coverflow carousel js-carousel">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide01">
+              <div class="swiper-slide__item">
+                <div class="swiper-slide__item__txt">
+                  <h2 class="swiper-slide__item__txt-ttl">
+                    知くんと一緒 愛と希望の×××
+                  </h2>
+                  <p class="swiper-slide__item__txt-date">
+                    放送日：第一/第三 日曜日
+                  </p>
+                  <p class="swiper-slide__item__txt-desc">
+                    趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
+                  </p>
+                  <a
+                    href="https://anchor.fm/creators-radio/episodes/ep-e1k9ppr"
+                    class="swiper-slide__item__btn btn"
+                    >最新話はこちら　</a
+                  >
+                </div>
+                <figure class="swiper-slide__item-img">
                   <img src="./assets/images/program_img02.png" alt="" />
                 </figure>
-                <div class="card__text">
-                  <h2 class="card__title">知くんと一緒 愛と希望の×××</h2>
-                  <p class="card__date">放送日：第一/第三 日曜日</p>
-                  <p class="card__detail">
-                    趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
-                  </p>
-                  <div class="card__btn">
-                    <a
-                      href="https://anchor.fm/creators-radio/episodes/ep-e1k9ppr"
-                      class="btn"
-                      >最新話はこちら　</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide card">
-                <figure class="card__img">
-                  <img src="./assets/images/program_img01.jpg" alt="" />
-                </figure>
-                <div class="card__text">
-                  <h2 class="card__title">
-                    みさ吉とピュン太のクリエイターズラジオ
-                  </h2>
-                  <p class="card__date">放送日：第一/第三 日曜日</p>
-                  <p class="card__detail">
-                    趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
-                  </p>
-                  <div class="card__btn">
-                    <a
-                      href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82MjYzYzQ1Yy9wb2RjYXN0L3Jzcw?sa=X&ved=0CAMQ4aUDahcKEwjI3f-bmdb4AhUAAAAAHQAAAAAQLg"
-                      class="btn"
-                      >最新話はこちら　</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide card">
-                <figure class="card__img">
-                  <img src="./assets/images/program_img03.jpg" alt="" />
-                </figure>
-                <div class="card__text">
-                  <h2 class="card__title">あおばラジオ</h2>
-                  <p class="card__date">放送日：第一/第三 日曜日</p>
-                  <p class="card__detail">
-                    趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
-                  </p>
-                  <div class="card__btn">
-                    <a
-                      href="https://youtube.com/playlist?list=PLP09kTsFaaqtS5VdPGy6c2yNgVrG_v5Ua"
-                      class="btn"
-                      >最新話はこちら　</a
-                    >
-                  </div>
-                </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-slide swiper-slide02">
+              <div class="swiper-slide__item">
+                <div class="swiper-slide__item__txt">
+                  <h2 class="swiper-slide__item__txt-ttl">
+                    みさ吉とピュン太のクリエイターズラジオ
+                  </h2>
+                  <p class="swiper-slide__item__txt-date">
+                    放送日：第一/第三 日曜日
+                  </p>
+                  <p class="swiper-slide__item__txt-desc">
+                    趣味やアマチュアで活動するあなたに向けたクリエイターのクリエイターによる、クリエイターのためのネットラジオクリエイターに関してのお役立ち情報をお伝えしたり、雑談をしたり…
+                  </p>
+                  <a
+                    href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82MjYzYzQ1Yy9wb2RjYXN0L3Jzcw?sa=X&ved=0CAMQ4aUDahcKEwjI3f-bmdb4AhUAAAAAHQAAAAAQLg"
+                    class="swiper-slide__item__btn btn"
+                    >最新話はこちら　</a
+                  >
+                </div>
+                <figure class="swiper-slide__item-img">
+                  <img src="./assets/images/program_img01.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide03">
+              <div class="swiper-slide__item">
+                <div class="swiper-slide__item__txt">
+                  <h2 class="swiper-slide__item__txt-ttl">あおばラジオ</h2>
+                  <p class="swiper-slide__item__txt-date">
+                    放送日：第一/第三 日曜日
+                  </p>
+                  <p class="swiper-slide__item__txt-desc">
+                    毒沼の魔女役の恋摘もなかさんとラプト役の遠藤まりえさんが贈る「蒼き薔薇のテラリウム」の公式ラジオ番組がついに配信開始！！かわいい代表の二人が織り成すトークタイムをぜひお楽しみください！
+                  </p>
+                  <a
+                    href="https://youtube.com/playlist?list=PLP09kTsFaaqtS5VdPGy6c2yNgVrG_v5Ua"
+                    class="swiper-slide__item__btn btn"
+                    >最新話はこちら　</a
+                  >
+                </div>
+                <figure class="swiper-slide__item-img">
+                  <img src="./assets/images/program_img03.jpg" alt="" />
+                </figure>
+              </div>
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>
@@ -211,21 +221,21 @@
         <ul class="actor__list">
           <li class="actor__list-item js-actor-list">
             <figure class="actor__imgwrap">
-              <img src="./assets/images/voice_1.png" alt="" />
+              <img src="./assets/images/misaki_avatar.svg" alt="銀星 岬" />
             </figure>
             <p class="actor__name">銀星 岬</p>
           </li>
           <li class="actor__list-item js-actor-list">
             <figure class="actor__imgwrap">
-              <img src="./assets/images/voice_2.png" alt="" />
+              <img src="./assets/images/kinsei_avatar.svg" alt="金生 健志" />
             </figure>
             <p class="actor__name">金生 健志</p>
           </li>
           <li class="actor__list-item js-actor-list">
             <figure class="actor__imgwrap">
-              <img src="./assets/images/voice_3.png" alt="" />
+              <img src="./assets/images/preparation.svg" alt="" />
             </figure>
-            <p class="actor__name">テキスト</p>
+            <p class="actor__name">準備中</p>
           </li>
         </ul>
         <div class="actor__btn">
@@ -289,7 +299,7 @@
     <footer class="footer">
       <div class="footer__inner inner">
         <a class="logo footer__logo" href="./index.html"
-          ><img src="./assets/images/skylimit_logo-white.svg" alt=""
+          ><img src="./assets/images/skylimit_logo-white.svg" alt="skylimit"
         /></a>
         <ul class="footer__list">
           <li class="footer__list-item">
@@ -303,6 +313,7 @@
         </ul>
         <small>&copy; SKY LIMIT All Rights Reserved.</small>
       </div>
+      <div class="page-top"></div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/gsap.min.js"></script>
